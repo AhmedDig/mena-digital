@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mena Digital – Portfolio</title>
+    <meta name="description"
+        content="Mena Digital – modern marketing, IT services, and creative portfolio. Liquid glass design.">
+    <!-- Suppress Chrome extension error -->
+    <script>
+        window.addEventListener('error', function (e) {
+            if (e.message && e.message.includes('receiving end does not exist')) {
+                e.preventDefault();
+                e.stopPropagation();
+                return true;
+            }
+        });
+    </script>
+    <!-- Font Awesome (CSS only) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Milestone 2 CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content portfolio.html">
+                <h1>Transforming <span class="text-gradient">Ideas</span> into Digital <span
+                        class="text-gradient">Reality</span></h1>
+                <p>Mena Digital – marketing, IT services, and creative solutions.</p>
+                <div>
+                    <a href="services.html" class="btn-primary glow-on-hover">Explore Services</a>
+                    <a href="portfolio.html" class="btn-secondary glow-on-hover">View Portfolio</a>
+                </div>
+            </div>
+            <div class="shape-divider">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path class="shape-fill"
+                        d="M0,120V73.71c47.79-22.2,103.59-32.17,158-28,70.36,5.37,136.33,33.31,206.8,37.5C438.64,87.57,512.34,66.33,583,47.95c69.27-18,138.3-24.88,209.4-13.08,36.15,6,69.85,17.84,104.45,29.34C989.49,95,1113,134.29,1200,67.53V120Z">
+                    </path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section id="services-preview" class="section-animate">
+            <div class="container glass-card p-6 glass-hover">
+                <h2 class="section-title text-balance">Our Services</h2>
+                <p class="text-center">Comprehensive solutions – from marketing to full‑stack development.</p>
+                <div class="services-grid">
+                    <div class="service-card-h glass-card p-6 glass-hover">
+                        <i class="fas fa-bullhorn card-icon"></i>
+                        <h3>Marketing</h3>
+                        <p>SEO, social media, content strategy.</p>
+                    </div>
+                    <div class="service-card-h glass-card p-6 glass-hover">
+                        <i class="fas fa-laptop-code card-icon"></i>
+                        <h3>IT Services</h3>
+                        <p>Web & app development, cloud, consulting.</p>
+                    </div>
+                    <div class="service-card-h glass-card p-6 glass-hover">
+                        <i class="fas fa-paintbrush card-icon"></i>
+                        <h3>Creative Design</h3>
+                        <p>UI/UX, branding, motion graphics.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="services.html" class="btn-secondary glow-on-hover">View all services →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview (icons instead of images) -->
+        <section id="portfolio-preview" class="section-animate">
+            <div class="container glass-card glass-hover">
+                <h2 class="section-title text-balance">Featured Projects</h2>
+                <p class="text-center">A glimpse at our recent work – crafted with passion and precision.</p>
+                <div class="projects-grid">
+                    <div class="projects-item">
+                        <i class="fas fa-globe fa-3x card-icon"></i>
+                        <h3>Corporate Website</h3>
+                        <p>Modern redesign + 150% engagement boost.</p>
+                        <a href="portfolio.html" class="btn-secondary glow-on-hover">View case study →</a>
+                    </div>
+                    <div class="projects-item">
+                        <i class="fas fa-mobile-alt fa-3x card-icon"></i>
+                        <h3>E‑commerce App</h3>
+                        <p>React Native, 10k+ downloads.</p>
+                        <a href="portfolio.html" class="btn-secondary glow-on-hover">View case study →</a>
+                    </div>
+                    <div class="projects-item">
+                        <i class="fas fa-chart-line fa-3x card-icon"></i>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real‑time data visualization.</p>
+                        <a href="portfolio.html" class="btn-secondary glow-on-hover">View case study →</a>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="portfolio.html" class="btn-primary glow-on-hover">View Full Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Contact Teaser -->
+        <section id="about-teaser" class="section-animate">
+            <div class="container flex flex-col md:flex-row gap-8 items-center ">
+                <div class="md:w-1/2">
+                    <div class="glass-card p-8 gap-4 glass-hover flex center flex-col items-center">
+                        <h2>Who We Are</h2>
+                        <p>Mena Digital is a team of strategists, designers, and engineers who believe in the power of
+                            digital to transform businesses.</p>
+                        <a href="about.html" class="btn-secondary">Learn about us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="glass-card p-8 gap-4 glass-hover flex center flex-col items-center">
+                        <h3>Let's Talk</h3>
+                        <p>Have a project in mind? We'd love to hear about it.</p>
+                        <a href="contact.html" class="btn-primary">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

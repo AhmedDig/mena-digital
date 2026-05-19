@@ -1,0 +1,35 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Dependency directories (if any)
+node_modules/
+
+# Build outputs (if any)
+dist/
+build/
+
+# Local env files
+.env
+.env.local
+
+# Large image previews (keep originals but ignore generated thumbs)
+*_thumb.jpg
+*_thumb.png

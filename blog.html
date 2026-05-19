@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – Mena Digital</title>
+    <meta name="description" content="Insights, tutorials, and news from Mena Digital.">
+    <script>
+        window.addEventListener('error', function (e) {
+            if (e.message && e.message.includes('receiving end does not exist')) {
+                e.preventDefault();
+                e.stopPropagation();
+                return true;
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section id="blog-hero" class="text-center" style="padding-top: 8rem;">
+            <div class="container">
+                <h1 class="section-title text-balance">Mena Digital Blog</h1>
+                <p>Insights, tutorials, and news from our team.</p>
+            </div>
+        </section>
+
+        <section id="blog-posts" class="section-animate">
+            <div class="container">
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <i class="fas fa-file-alt fa-3x" style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                        <div class="post-meta">April 15, 2025 • 5 min read</div>
+                        <h2 class="section-title text-balance">Why Your Business Needs a Liquid Glass Website</h2>
+                        <p>Discover how modern design trends like liquid glass can elevate user experience and brand
+                            perception.</p>
+                        <a href="post.html?post=1" class="btn-secondary right-btn glow-on-hover">Read more →</a>
+                    </article>
+                    <article class="blog-post">
+                        <i class="fas fa-chart-simple fa-3x"
+                            style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                        <div class="post-meta">April 8, 2025 • 4 min read</div>
+                        <h2 class="section-title text-balance">Top 5 SEO Strategies for 2025</h2>
+                        <p>Stay ahead of the curve with these actionable SEO tactics backed by data.</p>
+                        <a href="post.html?post=2" class="btn-secondary right-btn glow-on-hover">Read more →</a>
+                    </article>
+                    <article class="blog-post">
+                        <i class="fas fa-code-branch fa-3x"
+                            style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                        <div class="post-meta">April 1, 2025 • 6 min read</div>
+                        <h2 class="section-title text-balance">From Idea to Launch: Our Web Development Process</h2>
+                        <p>A behind‑the‑scenes look at how we build high‑performance websites.</p>
+                        <a href="post.html?post=3" class="btn-secondary right glow-on-hover">Read more →</a>
+                    </article>
+                    <article class="blog-post">
+                        <i class="fas fa-moon fa-3x" style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                        <div class="post-meta">March 25, 2025 • 3 min read</div>
+                        <h2 class="section-title text-balance">Why Dark Mode is More Than Just a Trend</h2>
+                        <p>Learn the UX benefits and implementation tips for dark mode interfaces.</p>
+                        <a href="post.html?post=4" class="btn-secondary right glow-on-hover">Read more →</a>
+                    </article>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="#" class="btn-secondary glow-on-hover">← Previous</a>
+                    <span class="mx-4">Page 1 of 3</span>
+                    <a href="#" class="btn-secondary glow-on-hover">Next →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-newsletter" class="section-animate glass-card p-8 text-center"
+            style="max-width: 600px; margin: 2rem auto;">
+            <h3 class="section-title text-balance">Subscribe to our newsletter</h3>
+            <p>Get the latest articles straight to your inbox.</p>
+            <form id="newsletterForm" class="flex gap-4" style="justify-content: center;">
+                <input type="email" placeholder="Your email address" required style="max-width: 300px;">
+                <button type="submit" class="btn-primary glow-on-hover">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

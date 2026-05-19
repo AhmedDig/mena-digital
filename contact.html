@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – Mena Digital</title>
+    <meta name="description" content="Get in touch with Mena Digital – we'd love to hear from you.">
+    <script>
+        window.addEventListener('error', function (e) {
+            if (e.message && e.message.includes('receiving end does not exist')) {
+                e.preventDefault();
+                e.stopPropagation();
+                return true;
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section id="contact-hero" class="text-center" style="padding-top: 8rem;">
+            <div class="container glass-card glass-hover">
+                <h1 class="section-title text-balance">Contact Us</h1>
+                <p>Have questions or want to learn more? Get in touch today.</p>
+            </div>
+        </section>
+
+        <section id="contact-form-section" class="section-animate">
+            <div class="container flex flex-row gap-8">
+                    <div class="glass-card p-8 w-full">
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="it">IT Services</option>
+                                <option value="creative">Creative Design</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full glow-on-hover">Send Message</button>
+                    </form>
+                </div>
+                    <div class="glass-card p-8 hover-glass w-25">
+                        <h3 class="section-title text-balance">Get in Touch</h3>
+                        <div class="mb-4"><i class="fas fa-map-marker-alt"></i> <strong>Location</strong><br>123
+                            Business Avenue, Digital District, Mena City</div>
+                        <div class="mb-4"><i class="fas fa-envelope"></i>
+                            <strong>Email</strong><br>info@menadigital.com<br>support@menadigital.com
+                        </div>
+                        <div class="mb-4"><i class="fas fa-phone-alt"></i> <strong>Call</strong><br>+1 (234) 567-8900
+                        </div>
+                        <div class="mb-4"><i class="fas fa-clock"></i> <strong>Hours</strong><br>Mon‑Fri:
+                            9:00‑18:00<br>Sat: 10:00‑16:00</div>
+                        <div class="flex gap-4 justify-center mt-6">
+                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                
+            </div>
+        </section>
+
+        <section id="faq" class="section-animate">
+            <div class="container glass-card p-8 glass-hover">
+                <h2 class="text-center section-title text-balance">Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <button class="faq-question">What services do you offer? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">We offer marketing, IT services, and creative design.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I get a quote? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">Fill out the contact form or call us – we'll respond within 24 hours.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you work with international clients? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">Yes, we work with clients worldwide.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

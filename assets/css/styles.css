@@ -1,0 +1,1251 @@
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- CSS Variables (Light Theme Default) ---------- */
+:root {
+    /* Colors */
+    --primary: #091a2a;
+    --primary-dark: #010c14;
+    --primary-soft: #2196f3;
+    --accent: #ffc107;
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+    --text-light: #f3f4f6;
+    --bg-light: #eeeeee;
+    --surface: #ffffff;
+
+    /* Glass & effects */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-menu-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
+    /* Hero overlay (light mode) */
+    --hero-overlay: rgba(0, 0, 0, 0.3);
+    --hero-bg: url('../img/hero-light.jpg');
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+    /* padding and margin utilities */
+    --padd-section: 3rem;
+    --padd-element: 1.5rem;
+    --padd-button: 0.75rem 1.5rem;
+
+    --mar-section: 3rem 0;
+    --mar-element: 1.5rem 0;
+}
+
+/* ---------- Dark Theme Overrides ---------- */
+.dark {
+    --bg-light: #111111;
+    --surface: #1e1e1e;
+    --text-dark: #EEEEEE;
+    --text-muted: #9ca3af;
+    --text-light: #f3f4f6;
+    --glass-bg: rgba(0, 0, 0, 0.5);
+    --glass-menu-bg: rgba(0, 0, 0, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --hero-overlay: rgba(0, 0, 0, 0.6);
+    --hero-bg: url('../img/hero-dark.jpg');
+}
+
+/* ---------- Reset & Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.glass-nav {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 70px;
+    background: var(--glass-bg);
+    background-blend-mode: exclusion;
+    backdrop-filter: blur(33px);
+    border: 1px solid rgb(255 255 255);
+    border-radius: 25px;
+    box-shadow: var(--glass-shadow);
+    z-index: 1000;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    margin: var(--mar-element);
+    padding: var(--padd-element);
+}
+
+/* Header inner layout (already in header.html) */
+
+.glass-nav .container {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padd-element);
+    gap: var(--padd-section);
+    width: 100%;
+    align-content: center;
+}
+
+
+/* Mobile menu – hidden by default, shown via JS */
+#mobileMenu {
+    display: none;
+    background: var(--glass-menu-bg);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--accent);
+    border-top: 1px solid var(--accent);
+}
+
+#mobileMenu.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#mobileMenu a {
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+#mobileMenu a:last-child {
+    border-bottom: none;
+}
+
+/* ---------- Footer Styling ---------- */
+footer {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    margin-top: 4rem;
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+/* Footer inner grid layout */
+footer>div:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* Individual footer columns */
+footer>div>div,
+footer>div:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Logo area */
+footer img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+footer .social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+footer .social a {
+    background: var(--glass-bg);
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+footer .social a:hover {
+    background: var(--primary-soft);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Headings and links */
+footer h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--primary-soft);
+}
+
+footer p {
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Copyright row */
+footer>div:last-child {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    padding: 0.5rem;
+    border-radius: 9999px;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile menu button */
+#mobileMenuButton {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    display: none;
+    /* hidden on desktop, shown via media query */
+}
+
+/* ---------- Container ---------- */
+
+.container {
+    width: 90%;
+    align-self: center;
+    justify-items: center;
+    justify-self: anchor-center;
+    border-radius: 1rem;
+    border: 1px solid var(--glass-border);
+    padding: var(--padd-element);
+    margin: var(--mar-section);
+}
+
+/* ---------- Hero Section ---------- */
+#hero {
+    position: relative;
+    min-height: 70vh;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hero-overlay);
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: var(--padd-element);
+    color: var(--text-dark);
+    z-index: 2;
+    background: var(--glass-menu-bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 4px solid var(--glass-border);
+    border-radius: 30px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.dark .hero-content h1 {
+    color: var(--accent);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-content .btn-primary,
+.hero-content .btn-secondary {
+    margin-right: 1rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: var(--padd-button);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    margin-top: var(--mar-element);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background: var(--primary-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background: var(--accent);
+    color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+
+.dark .btn-secondary:hover {
+    background: var(--primary-soft);
+    color: white;
+}
+
+/* ---------- Glass Cards (reusable) ---------- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: var(--padd-section);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Navigation & Footer ---------- */
+
+
+.desktop-nav {
+    display: flex;
+    gap: var(--padd-section);
+}
+
+
+/* Navigation links */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav-tab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: var(--padd-element);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.active-nav-link::after {
+    width: 100%;
+}
+
+.active-nav-link {
+    color: var(--accent);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    padding: var(--padd-element);
+    border-radius: 9999px;
+    transition: background 0.2s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile menu (hidden by default, toggled by JS) */
+#mobileMenu {
+    display: none;
+    padding: var(--padd-section);
+}
+
+#mobileMenu a,
+#mobileMenu button {
+    display: block;
+    padding: var(--padd-element);
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Services Grid, Portfolio Grid, Blog Grid, Team Grid */
+.services-grid,
+.portfolio-grid,
+.blog-posts,
+.team-grid,
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    gap: var(--padd-element);
+    padding: var(--padd-element);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex: 1;
+}
+
+.portfolio-grid {
+    flex-direction: column;
+    width: 100%;
+}
+
+.blog-posts {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.right-btn {
+    align-self: flex-end;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--padd-section);
+}
+
+.team-grid {
+    width: 100%;
+
+}
+
+/* Service cards (glass) */
+.service-card,
+.portfolio-item,
+.blog-post,
+.team-member,
+.projects-item,
+.service-card-h {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.service-card-h {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--padd-element);
+    width: 33%;
+    min-height: 250px;
+}
+
+.service-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--padd-element);
+    width: 33%;
+    min-height: 500px;
+}
+
+.projects-item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--padd-element);
+    width: 33%;
+    min-height: 300px;
+    text-align: center;
+}
+
+.portfolio-item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--padd-element);
+    width: 100%;
+    min-height: 500px;
+}
+
+.blog-post {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--padd-element);
+    width: stretch;
+    min-height: 200px;
+    align-items: flex-start;
+    gap: var(--padd-element);
+}
+
+.team-member {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: var(--padd-element);
+    min-width: 250px;
+    min-height: 200px;
+}
+
+.service-card:hover,
+.portfolio-item:hover,
+.blog-post:hover,
+.team-member:hover,
+.projects-item:hover,
+.service-card-h:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glass-shadow);
+}
+
+.service-card i,
+.portfolio-item i,
+.blog-post i,
+.team-member i,
+.projects-item i,
+.service-card-h i {
+    font-size: 2.5rem;
+    color: var(--primary-soft);
+    margin-bottom: 1rem;
+}
+
+.service-card h3,
+.portfolio-item h3,
+.blog-post h2,
+.team-member h3,
+.projects-item h3,
+.service-card-h h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Blog post meta */
+.post-meta {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Portfolio tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tags span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tags span {
+    background: var(--glass-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+}
+
+/* ---------- Form Styling ---------- */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.75rem;
+    color: var(--text-dark);
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-soft);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+    background: var(--primary-soft);
+    transform: translateY(-2px);
+}
+
+/* ---------- FAQ Accordion (style only, JS toggles) ---------- */
+.faq-question {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    padding: var(--padd-element);
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: background 0.2s;
+    padding: var(--padd-button);
+    margin: var(--mar-element);
+    color: var(--text-dark);
+    align-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.faq-question:hover {
+    background: var(--glass-bg);
+}
+
+.faq-answer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--glass-border);
+    margin-top: -0.5rem;
+    display: none;
+    /* Will be toggled by JS */
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+/* ---------- Scroll Animations ---------- */
+.section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Shape Divider ---------- */
+.shape-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+}
+
+.shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 20px);
+    /* wider to hide left/right blur fringe */
+    height: 90px;
+    /* taller to hide top/bottom blur fringe */
+    margin-left: -10px;
+    /* center the expanded width */
+    margin-bottom: -10px;
+    /* pull the bottom blur outside the container */
+    filter: blur(3px);
+}
+
+.shape-fill {
+    fill: var(--bg-light);
+}
+
+.dark .shape-fill {
+    fill: #111111;
+}
+
+/* Gradient text for hero and headings */
+.text-gradient {
+    background: linear-gradient(180deg,var(--primary), var(--primary-soft), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.dark .text-gradient {
+    background: linear-gradient(180deg, var(--primary), var(--accent), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Subtle glow on interactive elements */
+.glow-on-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+
+
+/* ---------- Improved Aesthetics (new classes) ---------- */
+
+/* Glass hover effect – for any glass card, button, or container */
+.glass-hover {
+    transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.2);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+}
+
+/* Consistent card icon style (replaces inline styles) */
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-soft);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Glow on hover for buttons or cards */
+.glow-on-hover {
+    transition: box-shadow 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+/* Different blur intensities (optional) */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-lg {
+    backdrop-filter: blur(24px);
+}
+
+/* Consistent section title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-dark);
+    padding: var(--padd-element);
+}
+
+.dark .section-title {
+    color: var(--text-dark);
+}
+
+/* Better text wrapping for headings */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Utility classes (if you want to replace inline flex/gap/padding) – optional */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* ---------- COMPLETE MOBILE VIEW (≤768px) ---------- */
+@media (max-width: 768px) {
+
+    /* ----- Base & Typography ----- */
+    body {
+        font-size: 14px;
+        /* space for fixed header */
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2,
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* ----- Container ----- */
+    .container {
+        width: 95%;
+        padding: 1rem;
+        margin: 1rem auto;
+        flex-direction: column;
+    }
+
+    /* ----- Header (glass-nav) ----- */
+    .glass-nav {
+        top: 10px;
+        width: 95%;
+        height: auto;
+        padding: 0.5rem 1rem;
+        margin: 5px auto;
+        border-radius: 30px;
+    }
+
+    .glass-nav .container {
+        padding: 0;
+        gap: 0;
+    }
+
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .desktop-nav {
+        display: none;
+        /* hide desktop nav, mobile menu button will show it */
+    }
+
+    #mobileMenuButton {
+        display: block;
+    }
+
+    #mobileMenu {
+        border-radius: 20px;
+        margin-top: 0.5rem;
+    }
+
+    #mobileMenu a {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    /* ----- Footer ----- */
+    footer {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+
+    footer>div:first-child {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    footer .social {
+        justify-content: center;
+    }
+
+    footer h4 {
+        margin-top: 1rem;
+    }
+
+    /* ----- Buttons & Forms ----- */
+    .btn-primary,
+    .btn-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+        padding: 0.7rem 1rem;
+    }
+
+    .hero-content .btn-primary,
+    .hero-content .btn-secondary {
+        margin: 0.5rem 0;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+        /* prevents zoom on focus in iOS */
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    /* ----- Glass Cards & Grids ----- */
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    /* All grid containers that should become carousels on mobile */
+    .services-grid,
+    .portfolio-grid,
+    .team-grid,
+    .blog-posts,
+    .projects-grid,
+    .service-steps {
+        /* if you have a separate steps grid */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        gap: var(--padd-element) !important;
+        padding: var(--padd-element) !important;
+        margin: 0 !important;
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
+        justify-content: flex-start !important;
+
+    }
+
+    .services-grid::-webkit-scrollbar,
+    .portfolio-grid::-webkit-scrollbar,
+    .team-grid::-webkit-scrollbar,
+    .blog-posts::-webkit-scrollbar,
+    .projects-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Each card snap and width */
+    .services-grid>*,
+    .portfolio-grid>*,
+    .team-grid>*,
+    .blog-posts>*,
+    .projects-grid>* {
+        scroll-snap-align: center !important;
+        flex: 0 0 95%;
+        max-width: 95% !important;
+        margin: 0 !important;
+    }
+
+    /* First card fully visible on left */
+    .services-grid>*:first-child,
+    .portfolio-grid>*:first-child,
+    .team-grid>*:first-child {
+        margin-left: 0 !important;
+        scroll-snap-align: start;
+    }
+
+    /* Carousel wrapper and arrows */
+    /* Carousel container wrapper (added by JS) */
+    .carousel-container {
+        position: relative;
+        margin: 1rem 0;
+        padding: 0 !important;
+        width: 90%;
+        overflow: clip;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--glass-bg);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--glass-border);
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.2s;
+        color: var(--text-dark);
+        padding: 0 !important;
+        margin: 0 !important;
+        line-height: 1;
+    }
+
+    .carousel-arrow i {
+        margin: 0;
+        padding: 0;
+        display: block;
+        line-height: 1;
+    }
+
+    .carousel-arrow.left {
+        left: 0;
+    }
+
+    .carousel-arrow.right {
+        right: 0;
+    }
+
+    .carousel-arrow:hover {
+        background: var(--primary-soft);
+        color: white;
+    }
+
+    /* ----- Individual card adjustments (height, spacing) ----- */
+    .service-card,
+    .portfolio-item,
+    .team-member {
+        width: 100%;
+        padding: 1.2rem;
+    }
+
+    .service-card i,
+    .portfolio-item i,
+    .team-member i,
+    .card-icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* ----- Sections spacing ----- */
+    section {
+        padding: 2rem 0;
+    }
+
+    .section-animate {
+        transform: translateY(15px);
+    }
+
+    /* ----- Hero section (background attachment fixed doesn't work well on mobile) ----- */
+    #hero {
+        background-attachment: scroll;
+        padding: 5rem 1rem;
+        min-height: 60vh;
+    }
+
+    /* ----- Shape divider ----- */
+    .shape-divider svg {
+        display: none;
+    }
+
+    /* ----- FAQ accordion ----- */
+    .faq-question {
+        font-size: 0.9rem;
+    }
+
+    .faq-answer {
+        padding: 0.8rem 1rem;
+    }
+
+    /* ----- Form grid in contact page ----- */
+    .flex.flex-col.md\:flex-row {
+        flex-direction: column;
+    }
+
+    .md\:w-1\/2 {
+        width: 100%;
+    }
+
+    /* ----- Remove extra margins from utility classes if they exist ----- */
+    .mt-10,
+    .mb-4,
+    .gap-8,
+    .gap-4 {
+        margin: 0.5rem 0;
+    }
+}

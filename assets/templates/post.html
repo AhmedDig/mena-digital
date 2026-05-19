@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post – Mena Digital</title>
+    <meta name="description" content="Full article.">
+    <script>
+        window.addEventListener('error', function (e) {
+            if (e.message && e.message.includes('receiving end does not exist')) {
+                e.preventDefault();
+                e.stopPropagation();
+                return true;
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <article id="single-post" class="container" style="padding-top: 8rem;">
+            <i class="fas fa-file-alt fa-4x" style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+            <div class="post-meta">April 15, 2025 • 5 min read</div>
+            <h1>Why Your Business Needs a Liquid Glass Website</h1>
+            <p>Full content goes here. This is a placeholder for the blog post text. Replace with actual article.</p>
+            <p>More paragraphs...</p>
+        </article>
+        <section id="related-posts" class="section-animate">
+            <div class="container">
+                <h3>Related Articles</h3>
+                <div class="services-grid" style="grid-template-columns: repeat(3,1fr);">
+                    <a href="#" class="glass-card p-4">Top 5 SEO Strategies</a>
+                    <a href="#" class="glass-card p-4">From Idea to Launch</a>
+                    <a href="#" class="glass-card p-4">Dark Mode Benefits</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
