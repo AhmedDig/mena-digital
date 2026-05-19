@@ -3,7 +3,7 @@
 A modern, responsive portfolio website built with a **liquid glass** aesthetic. Showcases services, portfolio projects, blog, and company info with a smooth light/dark mode toggle and mobile‑first carousels.
 
 ## Live Demo
-[View live site](https://AhmedDig.github.io/mena-digital/) – *replace with your GitHub Pages URL after deployment*
+[View live site](https://mena-digital.pages.dev/) – *replace with your GitHub Pages URL after deployment*
 
 ## Features
 
