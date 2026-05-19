@@ -24,3 +24,25 @@ A modern, responsive portfolio website built with a **liquid glass** aesthetic. 
 - Font Awesome Icons
 
 ## Project Structure
+mena-digital/
+├── index.html
+├── about.html
+├── services.html
+├── portfolio.html
+├── blog.html
+├── contact.html
+├── post.html
+├── assets/
+│ ├── css/
+│ │ └── styles.css
+│ ├── js/
+│ │ ├── menu.js
+│ │ └── main.js
+│ ├── img/
+│ │ ├── logo.png
+│ │ └── hero-light.jpg / hero-dark.jpg
+│ └── templates/
+│ ├── header.html
+│ └── footer.html
+├── .gitignore
+└── README.md
