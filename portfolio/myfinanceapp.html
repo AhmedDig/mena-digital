@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/portfolio/myfinanceapp.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>MyFinanceApp – Personal Finance OS | Mena Digital</title>
+        <meta name="description"
+            content="A native Android financial management app with offline-first architecture, PDF receipts, and full transaction tracking.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="MyFinanceApp – Personal Finance OS">
+        <meta property="og:description"
+            content="Native Android financial management app with offline-first architecture.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/portfolio/myfinanceapp.html">
+        <meta property="og:type" content="article">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="MyFinanceApp – Personal Finance OS">
+        <meta name="twitter:description" content="Native Android financial management app.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/portfolio/myfinanceapp.html">
+
+        <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Critical CSS (same block as other pages) -->
+        <style>
+            /* Paste the critical CSS block from the other case study pages here */
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- Hero -->
+            <section class="text-center section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h1 class="section-title text-balance">MyFinanceApp – Personal Finance OS</h1>
+                    <p>Native Android financial management app with offline-first architecture, PDF receipts, and full
+                        transaction tracking.</p>
+                </div>
+            </section>
+
+            <!-- Overview -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Project Overview</h2>
+                    <p class="text-center" style="font-size: 1.05rem; max-width: 800px; margin: 0 auto;">
+                        MyFinanceApp is a native Android application designed to serve as a complete personal and
+                        business financial operating system. It provides real‑time financial insights, transaction
+                        management, PDF receipt generation, and full data export – all stored locally with Room
+                        (SQLite) for offline‑first reliability.[reference:2]
+                    </p>
+                </div>
+            </section>
+
+            <!-- Challenge & Solution -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/2">
+                            <h2 class="section-title text-balance" style="font-size: 1.8rem;">The Challenge</h2>
+                            <p>Users needed a reliable, privacy‑first financial tool that could:</p>
+                            <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem;">
+                                <li>Track income, expenses, and financial runway in real time</li>
+                                <li>Work entirely offline – no cloud dependency</li>
+                                <li>Generate professional PDF receipts and statements</li>
+                                <li>Provide dynamic category and subcategory filtering</li>
+                                <li>Offer full data management (delete by date range, export statements)</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <h2 class="section-title text-balance" style="font-size: 1.8rem;">The Solution</h2>
+                            <p>We built a modern Android app with a clean architecture:</p>
+                            <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem;">
+                                <li><strong>Kotlin</strong> – modern, concise, and safe language</li>
+                                <li><strong>MVVM + StateFlow</strong> – reactive UI with predictable state management
+                                </li>
+                                <li><strong>Room (SQLite)</strong> – local database with offline‑first
+                                    reliability[reference:3]</li>
+                                <li><strong>Material Components</strong> – clean, intuitive UI following Material
+                                    Design[reference:4]</li>
+                                <li><strong>PDF generation</strong> – professional receipts and full financial
+                                    statements[reference:5]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Key Features</h2>
+                    <div class="services-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem;">
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-chart-pie fa-2x" style="color: var(--primary-soft);"></i>
+                            <h4>Dashboard</h4>
+                            <p style="font-size: 0.9rem;">Real‑time income, expenses, buffer, and runway[reference:6]
+                            </p>
+                        </div>
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-list-ul fa-2x" style="color: var(--primary-soft);"></i>
+                            <h4>Transactions</h4>
+                            <p style="font-size: 0.9rem;">Add, edit, delete with dynamic category filtering[reference:7]
+                            </p>
+                        </div>
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-file-pdf fa-2x" style="color: var(--primary-soft);"></i>
+                            <h4>PDF Receipts</h4>
+                            <p style="font-size: 0.9rem;">Generate and share receipts for any transaction[reference:8]
+                            </p>
+                        </div>
+                        <div class="glass-card p-4 text-center">
+                            <i class="fas fa-database fa-2x" style="color: var(--primary-soft);"></i>
+                            <h4>Data Management</h4>
+                            <p style="font-size: 0.9rem;">Delete by date range, export full statements as
+                                PDF[reference:9]</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Technology Stack</h2>
+                    <div class="services-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:1rem;">
+                        <div class="glass-card p-4 text-center"><strong>Kotlin</strong><br>Language</div>
+                        <div class="glass-card p-4 text-center"><strong>Android</strong><br>Platform</div>
+                        <div class="glass-card p-4 text-center"><strong>Room</strong><br>Database[reference:10]</div>
+                        <div class="glass-card p-4 text-center"><strong>MVVM</strong><br>Architecture[reference:11]
+                        </div>
+                        <div class="glass-card p-4 text-center"><strong>StateFlow</strong><br>Reactive UI[reference:12]
+                        </div>
+                        <div class="glass-card p-4 text-center"><strong>Material</strong><br>UI Design[reference:13]
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Key Outcomes</h2>
+                    <div class="services-grid" style="grid-template-columns: repeat(3,1fr); gap:1rem;">
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">100%</strong>
+                            <p>Offline‑first operation</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">v1.0.0</strong>
+                            <p>Production release[reference:14]</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">4+</strong>
+                            <p>Core features</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GitHub Link -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover text-center">
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                        <i class="fab fa-github" style="color: var(--primary-soft);"></i>
+                        Open source and available on GitHub.
+                    </p>
+                    <a href="https://github.com/AhmedDig/MyFinanceApp" target="_blank" rel="noopener"
+                        class="btn-secondary glow-on-hover">
+                        View on GitHub →
+                    </a>
+                </div>
+            </section>
+
+            <!-- Related Links -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover text-center">
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="/portfolio/" class="btn-secondary glow-on-hover">← Back to Portfolio</a>
+                        <a href="/contact.html" class="btn-primary glow-on-hover">Discuss a Similar Project</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>

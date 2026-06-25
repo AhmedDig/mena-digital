@@ -1,0 +1,12 @@
+# Security
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: strict-origin-when-cross-origin
+
+# All static assets (1 year, immutable)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages (1 hour – so updates aren't stuck forever)
+*.html
+  Cache-Control: public, max-age=3600

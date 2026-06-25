@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Graphic Design Services | Mena Digital</title>
+        <meta name="description"
+            content="Professional graphic design for logos, social media, banners, and more – from simple assets to full brand books." />
+        <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+
+        <!-- Preconnect (only used origins) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet" />
+
+        <!-- Critical CSS (same block) -->
+        <style>
+            /* Reset & Base */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: var(--bg-light);
+                color: var(--text-dark);
+                transition: background-color .3s, color .3s
+            }
+
+            /* CSS Variables (Light) */
+            :root {
+                --primary: #091a2a;
+                --primary-dark: #010c14;
+                --primary-soft: #2196f3;
+                --accent: #ffc107;
+                --text-dark: #1F2937;
+                --text-muted: #4B5563;
+                --text-light: #f3f4f6;
+                --bg-light: #eee;
+                --surface: #fff;
+                --glass-bg: rgba(255, 255, 255, .25);
+                --glass-menu-bg: rgba(255, 255, 255, .85);
+                --glass-border: rgba(255, 255, 255, .4);
+                --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, .15);
+                --hero-overlay: rgba(0, 0, 0, .3);
+                --hero-bg: url('/assets/img/hero-light.webp');
+                --transition: all .3s ease;
+                --padd-section: 3rem;
+                --padd-element: 1.5rem;
+                --padd-button: .75rem 1.5rem;
+                --mar-section: 3rem 0;
+                --mar-element: 1.5rem 0
+            }
+
+            /* Dark Theme */
+            .dark {
+                --bg-light: #111;
+                --surface: #1e1e1e;
+                --text-dark: #EEE;
+                --text-muted: #9ca3af;
+                --text-light: #f3f4f6;
+                --glass-bg: rgba(0, 0, 0, .5);
+                --glass-menu-bg: rgba(0, 0, 0, .85);
+                --glass-border: rgba(255, 255, 255, .15);
+                --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, .3);
+                --hero-overlay: rgba(0, 0, 0, .6);
+                --hero-bg: url('/assets/img/hero-dark.webp')
+            }
+
+            .desktop-nav {
+                display: flex;
+                gap: var(--padd-section)
+            }
+
+            .nav-tab {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                gap: var(--padd-element)
+            }
+
+            .nav-link {
+                position: relative;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color .3s;
+                color: var(--text-muted);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: center
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background: var(--accent);
+                transition: width .3s
+            }
+
+            .nav-link:hover::after,
+            .active-nav-link::after {
+                width: 100%
+            }
+
+            .active-nav-link {
+                color: var(--accent)
+            }
+
+            #mobileMenuButton {
+                background: 0 0;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--text-dark);
+                display: none
+            }
+
+            /* Buttons */
+            .btn-primary,
+            .btn-secondary {
+                display: inline-block;
+                padding: var(--padd-button);
+                border-radius: .75rem;
+                font-weight: 600;
+                transition: var(--transition);
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                border: none;
+                margin-top: var(--mar-element)
+            }
+
+            .btn-primary {
+                background: var(--primary);
+                color: var(--text-light)
+            }
+
+            .btn-secondary {
+                background: var(--accent);
+                color: var(--text-dark)
+            }
+
+            /* Container & Cards */
+            .container {
+                width: 90%;
+                align-self: center;
+                justify-items: center;
+                justify-self: anchor-center;
+                border-radius: 1rem;
+                border: 1px solid var(--glass-border);
+                padding: var(--padd-element);
+                margin: var(--mar-section)
+            }
+
+            .glass-card {
+                background: var(--glass-bg);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--glass-border);
+                border-radius: 1.5rem;
+                box-shadow: var(--glass-shadow);
+                transition: transform .3s ease, box-shadow .3s ease;
+                padding: var(--padd-section)
+            }
+
+            .glass-hover {
+                transition: all .3s ease
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+                color: var(--primary-soft);
+                margin-bottom: 1rem;
+                display: inline-block
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-align: center;
+                color: var(--text-dark);
+                padding: var(--padd-element)
+            }
+
+            .dark .section-title {
+                color: var(--text-dark)
+            }
+
+            .text-balance {
+                text-wrap: balance
+            }
+
+            /* Utilities */
+            .text-center {
+                text-align: center
+            }
+
+            .mt-10 {
+                margin-top: 2.5rem
+            }
+
+            .p-4 {
+                padding: 1rem
+            }
+
+            .p-6 {
+                padding: 1.5rem
+            }
+
+            .p-8 {
+                padding: 2rem
+            }
+
+            .gap-4 {
+                gap: 1rem
+            }
+
+            .flex {
+                display: flex
+            }
+
+            .flex-col {
+                flex-direction: column
+            }
+
+            .items-center {
+                align-items: center
+            }
+
+            .justify-center {
+                justify-content: center
+            }
+
+            .w-full {
+                width: 100%
+            }
+
+            .py-20 {
+                padding-top: 5rem;
+                padding-bottom: 5rem
+            }
+
+            .mb-8 {
+                margin-bottom: 2rem
+            }
+
+            .mt-4 {
+                margin-top: 1rem
+            }
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script type="application/ld+json">
+            { "@context": "https://schema.org", "@type": "Organization", "name": "Mena Digital" }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "serviceType": "Graphic Design",
+                "provider": { "@type": "Organization", "name": "Mena Digital" },
+                "offers": { "@type": "AggregateOffer", "priceCurrency": "USD", "lowPrice": "40", "highPrice": "939" }
+            }
+        </script>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover" style="max-width: 1000px; margin: 0 auto;">
+                    <h1 class="section-title text-balance" style="font-size: 2.5rem;">Graphic Design</h1>
+                    <p class="text-center" style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">
+                        Make your brand look professional with stunning visuals – from logos to complete brand
+                        identities.
+                    </p>
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">The Challenge</h2>
+                        <p style="line-height: 1.8; font-size: 1.05rem;">
+                            First impressions matter. A weak visual identity undermines trust and makes your business
+                            look amateurish. Many businesses rely on DIY tools or cheap templates that fail to
+                            differentiate them from competitors.
+                        </p>
+                        <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 1rem;">
+                            Great design builds credibility, communicates your values, and helps you stand out.
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">What We Design</h2>
+                        <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; font-size: 1.05rem;">
+                            <li><strong>Logos:</strong> Unique, memorable marks that define your brand.</li>
+                            <li><strong>Brand Books:</strong> Complete guidelines for colors, typography, and
+                                application.</li>
+                            <li><strong>Social Graphics:</strong> Posts, stories, and covers for all platforms.</li>
+                            <li><strong>Print &amp; Digital Assets:</strong> Flyers, banners, brochures, and more.</li>
+                        </ul>
+                        <p style="line-height: 1.8; font-size: 1.05rem; margin-top: 1rem;">
+                            We combine creativity with strategic thinking to deliver designs that resonate.
+                        </p>
+                    </div>
+                    <div style="background: var(--glass-bg); border-radius: 1rem; padding: 2rem;">
+                        <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">Per‑Project Pricing</h2>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+                                <thead>
+                                    <tr
+                                        style="background: var(--glass-bg); border-bottom: 2px solid var(--glass-border);">
+                                        <th style="padding: 0.8rem 0.5rem; text-align: left;">Service</th>
+                                        <th style="padding: 0.8rem 0.5rem; text-align: right;">Price (USD)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Quick design (1 hr)</td>
+                                        <td style="text-align: right;">$39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Social media graphic (single)</td>
+                                        <td style="text-align: right;">$40–$80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logo design</td>
+                                        <td style="text-align: right;">$391</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brand book</td>
+                                        <td style="text-align: right;">$939</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="text-align: center; color: var(--text-muted); margin: 1.5rem 0;">Monthly retainer
+                            available for ongoing design needs – starting at $300/mo for 10 assets.</p>
+                        <div style="text-align: center;">
+                            <a href="/contact.html" class="btn-primary glow-on-hover"
+                                style="padding: 0.8rem 2.5rem;">Request a Design Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>

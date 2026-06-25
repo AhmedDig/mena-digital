@@ -1,47 +1,47 @@
 <header class="glass-nav">
-    <!-- Logo with icon -->
-    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-        <img src="assets/img/logo.svg" alt="Mena Digital Logo" style="width: 40px; height: 40px;">
+    <!-- Logo -->
+    <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+        <!-- Added width, height, and lazy loading -->
+        <img src="/assets/img/logo.svg" alt="Mena Digital Logo" width="40" height="40" loading="lazy"
+            style="width: 40px; height: 40px;">
         <span style="font-size: 1.5rem; font-weight: bold; color: var(--text-dark);">Mena Digital</span>
     </a>
 
-    <!-- Desktop Navigation (hidden on mobile) -->
+    <!-- Desktop Navigation -->
     <div class="desktop-nav">
         <nav class="nav-tab">
-            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
-            <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a>
-            <a href="portfolio.html" class="nav-link"><i class="fas fa-folder-open"></i> Portfolio</a>
-            <a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
-            <a href="about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
-            <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="/" class="nav-link"><i class="fas fa-house"></i> Home</a>
+            <a href="/services/" class="nav-link"><i class="fas fa-gears"></i> Services</a>
+            <a href="/portfolio/" class="nav-link"><i class="fas fa-folder-open"></i> Portfolio</a>
+            <a href="/blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+            <a href="/about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
+            <a href="/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
         </nav>
+    </div>
+
+    <!--left bar-->
+    <div class="flex flex-row gap-4">
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
             <i id="sunIcon" class="fas fa-sun"></i>
             <i id="moonIcon" class="fas fa-moon" style="display: none;"></i>
         </button>
-    </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuButton" class="mobile-menu-btn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobileMenuButton" class="mobile-menu-btn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-    </button>
-    </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu glass-card glass-hover">
+            <nav class="flex flex-col">
+                <a href="/" class="nav-link"><i class="fas fa-house"></i> Home</a>
+                <a href="/services/" class="nav-link"><i class="fas fa-gears"></i> Services</a>
+                <a href="/portfolio/" class="nav-link"><i class="fas fa-folder-open"></i> Portfolio</a>
+                <a href="/blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
+                <a href="/about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
+                <a href="/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <hr style="margin: 0.5rem 0; border-color: var(--glass-border);">
 
-    <!-- Mobile Menu (hidden by default, toggled via JS) -->
-    <div id="mobileMenu" class="mobile-menu glass-card glass-hover">
-        <nav class="flex flex-col">
-            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
-            <a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a>
-            <a href="portfolio.html" class="nav-link"><i class="fas fa-folder-open"></i> Portfolio</a>
-            <a href="blog.html" class="nav-link"><i class="fas fa-blog"></i> Blog</a>
-            <a href="about.html" class="nav-link"><i class="fas fa-users"></i> About</a>
-            <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-            <hr style="margin: 0.5rem 0; border-color: var(--glass-border);">
-            <button id="mobileThemeToggle" class="theme-toggle" style="justify-content: flex-start;">
-                <i id="mobileSunIcon" class="fas fa-sun"></i>
-                <i id="mobileMoonIcon" class="fas fa-moon" style="display: none;"></i>
-                <span style="margin-left: 0.5rem;">Dark/Light</span>
-            </button>
-        </nav>
+            </nav>
+        </div>
     </div>
 </header>

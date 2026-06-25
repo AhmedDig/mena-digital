@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/portfolio/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Portfolio – Mena Digital</title>
+        <meta name="description"
+            content="View Mena Digital's portfolio – SaaS platforms, educational ecosystems, and custom software solutions.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="Portfolio – Mena Digital">
+        <meta property="og:description" content="Real projects with real results.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/portfolio/">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Portfolio – Mena Digital">
+        <meta name="twitter:description" content="Our latest work.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/portfolio/">
+
+        <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Critical CSS (same block) -->
+        <style>
+            /* Reset & Base */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: var(--bg-light);
+                color: var(--text-dark);
+                transition: background-color .3s, color .3s;
+            }
+
+            /* CSS Variables (Light) */
+            :root {
+                --primary: #091a2a;
+                --primary-dark: #010c14;
+                --primary-soft: #2196f3;
+                --accent: #ffc107;
+                --text-dark: #1F2937;
+                --text-muted: #4B5563;
+                --text-light: #f3f4f6;
+                --bg-light: #eee;
+                --surface: #fff;
+                --glass-bg: rgba(255, 255, 255, .25);
+                --glass-menu-bg: rgba(255, 255, 255, .85);
+                --glass-border: rgba(255, 255, 255, .4);
+                --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, .15);
+                --hero-overlay: rgba(0, 0, 0, .3);
+                --hero-bg: url('/assets/img/hero-light.webp');
+                --transition: all .3s ease;
+                --padd-section: 3rem;
+                --padd-element: 1.5rem;
+                --padd-button: .75rem 1.5rem;
+                --mar-section: 3rem 0;
+                --mar-element: 1.5rem 0;
+            }
+
+            /* Dark Theme */
+            .dark {
+                --bg-light: #111;
+                --surface: #1e1e1e;
+                --text-dark: #EEE;
+                --text-muted: #9ca3af;
+                --text-light: #f3f4f6;
+                --glass-bg: rgba(0, 0, 0, .5);
+                --glass-menu-bg: rgba(0, 0, 0, .85);
+                --glass-border: rgba(255, 255, 255, .15);
+                --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, .3);
+                --hero-overlay: rgba(0, 0, 0, .6);
+                --hero-bg: url('/assets/img/hero-dark.webp');
+            }
+
+            .desktop-nav {
+                display: flex;
+                gap: var(--padd-section);
+            }
+
+            .nav-tab {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                gap: var(--padd-element);
+            }
+
+            .nav-link {
+                position: relative;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color .3s;
+                color: var(--text-muted);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background: var(--accent);
+                transition: width .3s;
+            }
+
+            .nav-link:hover::after,
+            .active-nav-link::after {
+                width: 100%;
+            }
+
+            .active-nav-link {
+                color: var(--accent);
+            }
+
+            #mobileMenuButton {
+                background: 0 0;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--text-dark);
+                display: none;
+            }
+
+            /* Hero (generic) */
+            #portfolio-hero {
+                position: relative;
+                display: flex;
+                min-height: 40vh;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+                z-index: 1;
+            }
+
+            .hero-content {
+                max-width: 700px;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                z-index: 2;
+                background: var(--glass-menu-bg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: 4px solid var(--glass-border);
+                border-radius: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+                font-weight: 800;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+                color: var(--primary);
+            }
+
+            .dark .hero-content h1 {
+                color: var(--accent);
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                opacity: .9;
+            }
+
+            /* Buttons */
+            .btn-primary,
+            .btn-secondary {
+                display: inline-block;
+                padding: var(--padd-button);
+                border-radius: .75rem;
+                font-weight: 600;
+                transition: var(--transition);
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                border: none;
+                margin-top: var(--mar-element);
+            }
+
+            .btn-primary {
+                background: var(--primary);
+                color: var(--text-light);
+            }
+
+            .btn-secondary {
+                background: var(--accent);
+                color: var(--text-dark);
+            }
+
+            .glass-card {
+                background: var(--glass-bg);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--glass-border);
+                border-radius: 1.5rem;
+                box-shadow: var(--glass-shadow);
+                transition: transform .3s ease, box-shadow .3s ease;
+                padding: var(--padd-section);
+            }
+
+            .glass-hover {
+                transition: all .3s ease;
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+                color: var(--primary-soft);
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-align: center;
+                color: var(--text-dark);
+                padding: var(--padd-element);
+            }
+
+            .dark .section-title {
+                color: var(--text-dark);
+            }
+
+            .text-balance {
+                text-wrap: balance;
+            }
+
+            /* Portfolio Grid */
+            .portfolio-grid {
+                display: flex;
+                flex-direction: row;
+                gap: var(--padd-element);
+                padding: var(--padd-element);
+                align-items: stretch !important;
+                justify-content: space-evenly !important;
+                align-content: stretch !important;
+                flex-wrap: wrap !important;
+            }
+
+            .portfolio-item {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                flex: 1 0 20% !important;
+                min-width: 30% !important;
+                min-height: 500px !important;
+                background: var(--glass-bg);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--glass-border);
+                border-radius: 1.5rem;
+                overflow: hidden;
+                transition: transform .3s, box-shadow .3s;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                text-align: center;
+                gap: 1.5rem;
+                text-decoration-line: none;
+            }
+
+            .portfolio-item i {
+                font-size: 5rem;
+                color: var(--primary-soft);
+                align-self: center;
+                justify-self: center;
+                justify-items: center;
+            }
+
+            .portfolio-item h3 {
+                margin-bottom: .5rem;
+            }
+
+            .portfolio-item .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+
+            .portfolio-item .tags span {
+                background: var(--glass-bg);
+                padding: 0.25rem 0.75rem;
+                border-radius: 2rem;
+                font-size: 0.75rem;
+            }
+
+            /* Utilities */
+            .text-center {
+                text-align: center;
+            }
+
+            .mt-10 {
+                margin-top: 2.5rem;
+            }
+
+            .p-4 {
+                padding: 1rem;
+            }
+
+            .p-6 {
+                padding: 1.5rem;
+            }
+
+            .p-8 {
+                padding: 2rem;
+            }
+
+            .gap-4 {
+                gap: 1rem;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex-col {
+                flex-direction: column;
+            }
+
+            .items-center {
+                align-items: center;
+            }
+
+            .justify-center {
+                justify-content: center;
+            }
+
+            .w-full {
+                width: 100%;
+            }
+
+            .py-20 {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+
+            .mb-8 {
+                margin-bottom: 2rem;
+            }
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <section id="portfolio-hero" class="text-center">
+                <div class="container glass-card glass-hover">
+                    <h1 class="section-title text-balance">Our Portfolio</h1>
+                    <p>Real projects with real results – built for businesses that need more than just a website.</p>
+                </div>
+            </section>
+
+            <section id="portfolio-grid" class="section-animate">
+                <div class="container glass-card glass-hover">
+                    <div class="portfolio-grid">
+                        <!-- Project 1: Deskpro360 -->
+                        <div class="portfolio-item glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-cubes fa-3x card-icon"></i>
+                                <h3>Deskpro360 – Business Management Suite</h3>
+                            </div>
+                            <p>All‑in‑one inventory, POS, and customer management for small/medium businesses.</p>
+                            <div class="tags">
+                                <span>Django</span><span>PostgreSQL</span><span>HTMX</span><span>Tailwind</span>
+                            </div>
+                            <a href="/portfolio/deskpro360.html" class="btn-secondary glow-on-hover">View Case Study
+                                →</a>
+                        </div>
+                        <!-- Project 2: Lighton Static -->
+                        <div class="portfolio-item glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-globe fa-3x card-icon"></i>
+                                <h3>Lighton Static – Serverless Assessment Platform</h3>
+                            </div>
+                            <p>Fully static, bilingual educational platform with adaptive placement testing – built
+                                without a traditional backend.</p>
+                            <div class="tags"><span>Vanilla JS</span><span>Cloudflare</span><span>Google Sheets</span>
+                            </div>
+                            <a href="/portfolio/lighton-static.html" class="btn-secondary glow-on-hover">View Case Study
+                                →</a>
+                        </div>
+                        <!-- Project 3: Lighton Platform (Laravel + Moodle) -->
+                        <div class="portfolio-item glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-network-wired fa-3x card-icon"></i>
+                                <h3>Lighton Platform – Integrated LMS &amp; CRM</h3>
+                            </div>
+                            <p>Complete learning management ecosystem combining Laravel, Moodle, and a custom CRM –
+                                fully dynamic.</p>
+                            <div class="tags"><span>Laravel</span><span>Moodle</span><span>MySQL</span><span>REST
+                                    API</span></div>
+                            <a href="/portfolio/lighton-platform.html" class="btn-secondary glow-on-hover">View Case
+                                Study →</a>
+                        </div>
+                        <!-- Project 4: MyFinanceApp -->
+                        <div class="portfolio-item glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-wallet fa-3x card-icon"></i>
+                                <h3>MyFinanceApp – Personal Finance OS</h3>
+                            </div>
+                            <p>Native Android financial management app with offline-first architecture, PDF receipts,
+                                and full transaction tracking.</p>
+                            <div class="tags"><span>Kotlin</span><span>Android</span><span>Room</span><span>MVVM</span>
+                            </div>
+                            <a href="/portfolio/myfinanceapp.html" class="btn-secondary glow-on-hover">View Case Study
+                                →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio-cta" class="section-animate text-center py-20">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance">Have a project in mind?</h2>
+                    <p>Let's build something great together.</p>
+                    <a href="/contact.html" class="btn-primary glow-on-hover mt-4">Let's work together</a>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>

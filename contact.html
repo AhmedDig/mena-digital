@@ -1,124 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – Mena Digital</title>
-    <meta name="description" content="Get in touch with Mena Digital – we'd love to hear from you.">
-    <script>
-        window.addEventListener('error', function (e) {
-            if (e.message && e.message.includes('receiving end does not exist')) {
-                e.preventDefault();
-                e.stopPropagation();
-                return true;
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/contact.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Contact Us – Mena Digital</title>
+        <meta name="description"
+            content="Get in touch with Mena Digital. Based in Bethlehem, West Bank. We offer AI, marketing, web, and software solutions.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="Contact Us – Mena Digital">
+        <meta property="og:description" content="Reach out to Mena Digital – we'd love to hear from you.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/contact.html">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Contact Us – Mena Digital">
+        <meta name="twitter:description" content="Contact Mena Digital today.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/contact.html">
+
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Organization schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mena Digital",
+            "description": "AI automation, web development, digital marketing, and creative solutions for businesses.",
+            "url": "https://mena-digital.pages.dev",
+            "logo": "https://mena-digital.pages.dev/assets/img/logo.svg",
+            "email": "menadigital.digital@gmail.com",
+            "telephone": "+972568535126",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bethlehem",
+                "addressRegion": "West Bank",
+                "addressCountry": "PS"
+            },
+            "sameAs": [
+                "https://www.facebook.com/Menadigital.media/",
+                "https://www.instagram.com/menadigital.media/",
+                "https://x.com/Menadigital_dig",
+                "https://www.youtube.com/channel/UC4vo3R3BrEt1ar0Os6pfKRw",
+                "https://www.pinterest.com/menadigitaldigital/"
+            ]
+        }
+        </script>
+
+        <!-- ContactPage schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Mena Digital",
+            "description": "Get in touch with Mena Digital.",
+            "mainEntity": {
+                "@type": "Organization",
+                "name": "Mena Digital",
+                "email": "menadigital.digital@gmail.com",
+                "telephone": "+972568535126",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Bethlehem",
+                    "addressRegion": "West Bank",
+                    "addressCountry": "PS"
+                }
             }
-        });
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <meta property="og:title" content="Mena Digital – Liquid Glass Portfolio">
-    <meta property="og:description"
-        content="Modern marketing, IT services, and creative portfolio with a stunning liquid glass design.">
-    <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-image.png">
-    <meta property="og:url" content="https://mena-digital.pages.dev/">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mena Digital – Liquid Glass Portfolio">
-    <meta name="twitter:description" content="Modern marketing, IT services, and creative portfolio.">
-    <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-image.png">
-</head>
+        }
+        </script>
 
-<body>
-    <div id="header-placeholder"></div>
-    <main>
-        <section id="contact-hero" class="text-center" style="padding-top: 8rem;">
-            <div class="container glass-card glass-hover">
-                <h1 class="section-title text-balance">Contact Us</h1>
-                <p>Have questions or want to learn more? Get in touch today.</p>
-            </div>
-        </section>
+        <!-- Critical CSS (same block) -->
+        <style>
+            /* Hero (generic) */
+            #contact-hero {
+                position: relative;
+                min-height: 40vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+                z-index: 1
+            }
 
-        <section id="contact-form-section" class="section-animate">
-            <div class="container flex flex-row gap-8">
-                    <div class="glass-card p-8 w-full">
-                    <form id="contactForm">
-                        <div class="mb-4">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="service">Service Interest</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="marketing">Marketing</option>
-                                <option value="it">IT Services</option>
-                                <option value="creative">Creative Design</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary w-full glow-on-hover">Send Message</button>
-                    </form>
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                width: 75%;
+                align-items: start;
+                margin-top: var(--mar-element);
+                justify-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .contact-details {
+                flex: 1 1 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                padding: var(--padd-element);
+            }
+
+            .contact-map {
+                flex: 1 1 50%;
+                display: flex;
+                flex-direction: column;
+                padding: var(--padd-element);
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .contact-item i {
+                font-size: 1.25rem;
+                color: var(--primary-soft);
+                width: 24px;
+                margin-top: 2px;
+            }
+
+            .contact-item strong {
+                display: block;
+                font-weight: 600;
+            }
+
+            .contact-item p {
+                margin: 0;
+                color: var(--text-muted);
+            }
+
+            .contact-social {
+                display: flex;
+                gap: .75rem;
+                margin-top: .5rem;
+            }
+
+            .contact-social a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: var(--glass-bg);
+                border: 1px solid var(--glass-border);
+                color: var(--text-dark);
+                text-decoration: none;
+                transition: all .3s ease;
+            }
+
+            .contact-social a:hover {
+                background: var(--primary-soft);
+                color: #fff;
+                transform: translateY(-3px);
+            }
+
+            .mb-6 {
+                margin-bottom: 2rem !important;
+            }
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <!-- ===== CONTACT HERO ===== -->
+            <section id="contact-hero" class="text-center">
+                <div class="container glass-card glass-hover p-8">
+                    <h1 class="section-title text-balance">Contact Us</h1>
+                    <p>Have a project in mind? We'd love to hear from you.</p>
                 </div>
-                    <div class="glass-card p-8 hover-glass w-25">
-                        <h3 class="section-title text-balance">Get in Touch</h3>
-                        <div class="mb-4"><i class="fas fa-map-marker-alt"></i> <strong>Location</strong><br>123
-                            Business Avenue, Digital District, Mena City</div>
-                        <div class="mb-4"><i class="fas fa-envelope"></i>
-                            <strong>Email</strong><br>info@menadigital.com<br>support@menadigital.com
+            </section>
+
+            <!-- ===== CONTACT + MAP ===== -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance">Get in Touch</h2>
+                    <p class="text-center mb-6">We're based in Bethlehem, West Bank – but we work with clients
+                        worldwide.</p>
+
+                    <div class="contact-grid">
+                        <!-- LEFT: Contact Info -->
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Location</strong>
+                                    <p>Bethlehem, West Bank</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>menadigital.digital@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <strong>Phone / WhatsApp</strong>
+                                    <p>+972 56 853-5126</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Business Hours</strong>
+                                    <p>Mon‑Fri: 9:00‑18:00<br>Sat: 10:00‑16:00</p>
+                                </div>
+                            </div>
+                            <div class="contact-social">
+                                <a href="https://www.facebook.com/Menadigital.media/" target="_blank" rel="noopener"
+                                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/menadigital.media/" target="_blank" rel="noopener"
+                                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://x.com/Menadigital_dig" target="_blank" rel="noopener"
+                                    aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UC4vo3R3BrEt1ar0Os6pfKRw" target="_blank"
+                                    aria-label="Youtube" rel="noopener"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.linkedin.com/company/menadigital" target="_blank"
+                                    aria-label="Linkedin" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
-                        <div class="mb-4"><i class="fas fa-phone-alt"></i> <strong>Call</strong><br>+1 (234) 567-8900
-                        </div>
-                        <div class="mb-4"><i class="fas fa-clock"></i> <strong>Hours</strong><br>Mon‑Fri:
-                            9:00‑18:00<br>Sat: 10:00‑16:00</div>
-                        <div class="flex gap-4 justify-center mt-6">
-                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="glass-card p-2 glow-on-hover"><i class="fab fa-linkedin-in"></i></a>
+
+                        <!-- RIGHT: Map -->
+                        <div class="contact-map">
+                            <div class="map-wrapper">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5430.459228376459!2d35.191201!3d31.704617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1700000000000"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a href="https://maps.google.com/?q=31.704617,35.191201" target="_blank" rel="noopener"
+                                    class="btn-secondary glow-on-hover"
+                                    style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+                                    <i class="fas fa-map-pin"></i> Open in Google Maps
+                                </a>
+                            </div>
                         </div>
                     </div>
-                
-            </div>
-        </section>
-
-        <section id="faq" class="section-animate">
-            <div class="container glass-card p-8 glass-hover">
-                <h2 class="text-center section-title text-balance">Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <button class="faq-question">What services do you offer? <i
-                            class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">We offer marketing, IT services, and creative design.</div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">How can I get a quote? <i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Fill out the contact form or call us – we'll respond within 24 hours.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Do you work with international clients? <i
-                            class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">Yes, we work with clients worldwide.</div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script src="assets/js/menu.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+            </section>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
 
 </html>

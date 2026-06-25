@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/terms-of-service.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Terms of Service – Mena Digital</title>
+        <meta name="description"
+            content="Read Mena Digital's terms of service. Understand the legal terms governing your use of our website and services.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="Terms of Service – Mena Digital">
+        <meta property="og:description" content="Terms of service governing your use of Mena Digital.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/terms-of-service.html">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Terms of Service – Mena Digital">
+        <meta name="twitter:description" content="Our terms of service.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/terms-of-service.html">
+
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts – asynchronous -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+        </noscript>
+
+        <!-- Schema: WebPage -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Terms of Service",
+                "description": "Terms of service for Mena Digital.",
+                "url": "https://mena-digital.pages.dev/terms-of-service.html"
+            }
+        </script>
+
+        <!-- Critical CSS (same block – I'll inline it) -->
+        <style>
+            /* Same critical CSS as privacy-policy.html – included inline */
+            /* Reset & Base */
+            * { margin: 0; padding: 0; box-sizing: border-box }
+            body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); transition: background-color .3s, color .3s }
+
+            :root {
+                --primary: #091a2a;
+                --primary-dark: #010c14;
+                --primary-soft: #2196f3;
+                --accent: #ffc107;
+                --text-dark: #1F2937;
+                --text-muted: #4B5563;
+                --text-light: #f3f4f6;
+                --bg-light: #eee;
+                --surface: #fff;
+                --glass-bg: rgba(255,255,255,.25);
+                --glass-menu-bg: rgba(255,255,255,.85);
+                --glass-border: rgba(255,255,255,.4);
+                --glass-shadow: 0 8px 32px 0 rgba(31,38,135,.15);
+                --hero-overlay: rgba(0,0,0,.3);
+                --hero-bg: url('/assets/img/hero-light.webp');
+                --transition: all .3s ease;
+                --padd-section: 3rem;
+                --padd-element: 1.5rem;
+                --padd-button: .75rem 1.5rem;
+                --mar-section: 3rem 0;
+                --mar-element: 1.5rem 0
+            }
+            .dark {
+                --bg-light: #111;
+                --surface: #1e1e1e;
+                --text-dark: #EEE;
+                --text-muted: #9ca3af;
+                --text-light: #f3f4f6;
+                --glass-bg: rgba(0,0,0,.5);
+                --glass-menu-bg: rgba(0,0,0,.85);
+                --glass-border: rgba(255,255,255,.15);
+                --glass-shadow: 0 8px 32px 0 rgba(0,0,0,.3);
+                --hero-overlay: rgba(0,0,0,.6);
+                --hero-bg: url('/assets/img/hero-dark.webp')
+            }
+            .glass-nav {
+                position: fixed;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                height: 70px;
+                background: var(--glass-bg);
+                background-blend-mode: exclusion;
+                backdrop-filter: blur(33px);
+                border: 1px solid #fff;
+                border-radius: 25px;
+                box-shadow: var(--glass-shadow);
+                z-index: 1000;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                transition: all .3s ease;
+                margin: var(--mar-element);
+                padding: var(--padd-element)
+            }
+            .desktop-nav { display: flex; gap: var(--padd-section) }
+            .nav-tab { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-content: center; align-items: center; gap: var(--padd-element) }
+            .nav-link { position: relative; text-decoration: none; font-weight: 500; transition: color .3s; color: var(--text-muted); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; align-content: center }
+            .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: var(--accent); transition: width .3s }
+            .nav-link:hover::after, .active-nav-link::after { width: 100% }
+            .active-nav-link { color: var(--accent) }
+            #mobileMenuButton { background: 0 0; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); display: none }
+            #mobileMenu { display: none; background: var(--glass-menu-bg); backdrop-filter: blur(12px); border-top: 1px solid var(--accent); padding: var(--padd-section) }
+            #mobileMenu.show { display: block; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 999; overflow-y: auto }
+            #mobileMenu a, #mobileMenu button { display: block; padding: var(--padd-element); color: var(--text-dark); text-decoration: none }
+            #mobileMenu a { padding: .75rem 0; border-bottom: 1px solid var(--glass-border) }
+            #mobileMenu a:last-child { border-bottom: none }
+            .page-hero { position: relative; min-height: 40vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; z-index: 1; padding-top: 6rem; }
+            .hero-content { max-width: 700px; padding: var(--padd-element); color: var(--text-dark); z-index: 2; background: var(--glass-menu-bg); background-position: center; background-repeat: no-repeat; background-size: cover; border: 4px solid var(--glass-border); border-radius: 30px }
+            .hero-content h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; color: var(--primary) }
+            .dark .hero-content h1 { color: var(--accent) }
+            .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; opacity: .9 }
+            .btn-primary, .btn-secondary { display: inline-block; padding: var(--padd-button); border-radius: .75rem; font-weight: 600; transition: var(--transition); text-align: center; cursor: pointer; text-decoration: none; border: none; margin-top: var(--mar-element) }
+            .btn-primary { background: var(--primary); color: var(--text-light) }
+            .btn-secondary { background: var(--accent); color: var(--text-dark) }
+            .container { width: 90%; align-self: center; justify-items: center; justify-self: anchor-center; border-radius: 1rem; border: 1px solid var(--glass-border); padding: var(--padd-element); margin: var(--mar-section) }
+            .glass-card { background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 1.5rem; box-shadow: var(--glass-shadow); transition: transform .3s ease, box-shadow .3s ease; padding: var(--padd-section) }
+            .glass-hover { transition: all .3s ease }
+            .section-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; text-align: center; color: var(--text-dark); padding: var(--padd-element) }
+            .dark .section-title { color: var(--text-dark) }
+            .text-balance { text-wrap: balance }
+            .legal-content { max-width: 800px; margin: 0 auto; text-align: left; line-height: 1.8; }
+            .legal-content h2 { font-size: 1.8rem; margin: 2rem 0 1rem; }
+            .legal-content h3 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; }
+            .legal-content p { margin-bottom: 1rem; color: var(--text-muted); }
+            .legal-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+            .legal-content ul li { margin-bottom: 0.5rem; color: var(--text-muted); }
+            .text-center { text-align: center }
+            .mt-10 { margin-top: 2.5rem }
+            .p-4 { padding: 1rem }
+            .p-6 { padding: 1.5rem }
+            .p-8 { padding: 2rem }
+            .gap-4 { gap: 1rem }
+            .flex { display: flex }
+            .flex-col { flex-direction: column }
+            .items-center { align-items: center }
+            .justify-center { justify-content: center }
+            .md\:w-1\/2 { width: 50% }
+            .md\:flex-row { flex-direction: row }
+            .w-full { width: 100% }
+        </style>
+
+        <!-- Non-blocking CSS -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/css/styles.css"></noscript>
+
+        <!-- Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/fontawesome/css/all.min.css"></noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <section class="page-hero">
+                <div class="container glass-card glass-hover p-8">
+                    <h1 class="section-title text-balance">Terms of Service</h1>
+                    <p>Last updated: June 26, 2026</p>
+                </div>
+            </section>
+
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <div class="legal-content">
+                        <p>Welcome to Mena Digital. By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions. If you do not agree with these terms, please do not use our website.</p>
+
+                        <h2>1. Acceptance of Terms</h2>
+                        <p>By using this website, you agree to these Terms of Service, our Privacy Policy, and any other policies or notices posted on this site. We reserve the right to update or modify these terms at any time without prior notice. Your continued use of the site constitutes acceptance of any changes.</p>
+
+                        <h2>2. Services Provided</h2>
+                        <p>Mena Digital offers a range of services including but not limited to: AI automation, digital marketing, web development, software development, SEO, social media management, PPC management, content marketing, email marketing, graphic design, and WhatsApp automation. All services are subject to specific project agreements and pricing terms outlined in individual contracts.</p>
+
+                        <h2>3. Intellectual Property</h2>
+                        <p>All content on this website, including text, graphics, logos, icons, images, and software, is the property of Mena Digital or its content suppliers and is protected by applicable copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works without our explicit written consent.</p>
+
+                        <h2>4. User Conduct</h2>
+                        <p>You agree to use our website and services only for lawful purposes. You are prohibited from:</p>
+                        <ul>
+                            <li>Using the site in any way that could damage, disable, or impair the site.</li>
+                            <li>Attempting to gain unauthorised access to any part of our systems.</li>
+                            <li>Uploading or transmitting viruses, malware, or any other harmful code.</li>
+                            <li>Using our services to harass, abuse, or defraud others.</li>
+                        </ul>
+
+                        <h2>5. Client Responsibilities</h2>
+                        <p>Clients engaging our services agree to:</p>
+                        <ul>
+                            <li>Provide accurate and complete information necessary for project delivery.</li>
+                            <li>Cooperate in good faith throughout the project lifecycle.</li>
+                            <li>Pay all fees and invoices in accordance with the agreed payment schedule.</li>
+                        </ul>
+
+                        <h2>6. Payment and Pricing</h2>
+                        <p>Service fees are outlined in individual proposals and contracts. All prices are in US Dollars (USD) unless otherwise stated. Payment terms are specified in the service agreement. Late payments may incur interest or suspension of services.</p>
+
+                        <h2>7. Limitation of Liability</h2>
+                        <p>To the fullest extent permitted by law, Mena Digital shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services.</p>
+
+                        <h2>8. No Guarantee of Results</h2>
+                        <p>While we strive to deliver exceptional results, we do not guarantee specific outcomes such as increased revenue, website traffic, or search engine rankings. Results depend on many factors beyond our control.</p>
+
+                        <h2>9. Third‑Party Links</h2>
+                        <p>Our website may contain links to third‑party sites. We do not control and are not responsible for the content, privacy policies, or practices of any third‑party sites. We encourage you to review their policies before using them.</p>
+
+                        <h2>10. Governing Law</h2>
+                        <p>These terms shall be governed by and construed in accordance with the laws of the State of Palestine, without regard to its conflict of law provisions. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts of Bethlehem, West Bank.</p>
+
+                        <h2>11. Termination</h2>
+                        <p>We reserve the right to terminate or suspend your access to our services immediately, without prior notice, for conduct that we believe violates these terms or is harmful to other users, us, or third parties.</p>
+
+                        <h2>12. Contact Us</h2>
+                        <p>If you have any questions about these Terms of Service, please contact us:</p>
+                        <ul>
+                            <li><strong>Email:</strong> <a href="mailto:menadigital.digital@gmail.com" style="color: var(--primary-soft);">menadigital.digital@gmail.com</a></li>
+                            <li><strong>Phone:</strong> +972 56 853-5126</li>
+                            <li><strong>Address:</strong> Bethlehem, West Bank</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-center py-20 section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance">Have questions about our terms?</h2>
+                    <p>We're here to clarify.</p>
+                    <a href="contact.html" class="btn-primary glow-on-hover mt-4">Contact Us</a>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/faq.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Frequently Asked Questions – Mena Digital</title>
+        <meta name="description"
+            content="Answers to common questions about AI automation, web development, digital marketing, and Mena Digital's services.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="FAQ – Mena Digital">
+        <meta property="og:description" content="Find answers to common questions about our services.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/faq.html">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="FAQ – Mena Digital">
+        <meta name="twitter:description" content="Frequently asked questions.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/faq.html">
+
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Organization schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mena Digital",
+            "description": "AI automation, web development, digital marketing, and creative solutions for businesses.",
+            "url": "https://mena-digital.pages.dev",
+            "logo": "https://mena-digital.pages.dev/assets/img/logo.svg",
+            "email": "menadigital.digital@gmail.com",
+            "telephone": "+972568535126",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bethlehem",
+                "addressRegion": "West Bank",
+                "addressCountry": "PS"
+            },
+            "sameAs": [
+                "https://www.facebook.com/Menadigital.media/",
+                "https://www.instagram.com/menadigital.media/",
+                "https://x.com/Menadigital_dig",
+                "https://www.youtube.com/channel/UC4vo3R3BrEt1ar0Os6pfKRw",
+                "https://www.pinterest.com/menadigitaldigital/"
+            ]
+        }
+        </script>
+
+        <!-- FAQPage schema (keep yours) -->
+
+        <!-- Critical CSS -->
+        <style>
+            .faq-item {
+                scroll-margin-top: 100px;
+                /* Space for fixed header */
+            }
+
+            /* Also apply to the top grid links for smooth scrolling */
+            .faq-top-grid a {
+                scroll-margin-top: 100px;
+            }
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- ======== FAQ HERO ======== -->
+            <section id="faq-hero" class="text-center section-animate">
+                <div class="container glass-card glass-hover p-8">
+                    <h1 class="section-title text-balance">Frequently Asked Questions</h1>
+                    <p>Find answers to common questions about our services and solutions.</p>
+                </div>
+                <div class="container glass-card p-8 glass-hover">
+                    <h3 class="section-title text-balance" style="font-size: 1.5rem;">🔥 Most Asked</h3>
+                    <div class="faq-top-grid">
+                        <a href="#faq-item-1" class="glass-card p-4 glass-hover text-center">What is AI automation?</a>
+                        <a href="#faq-item-2" class="glass-card p-4 glass-hover text-center">How much does a website cost?</a>
+                        <a href="#faq-item-3" class="glass-card p-4 glass-hover text-center">How long does SEO take to show results?</a>
+                        <a href="#faq-item-4" class="glass-card p-4 glass-hover text-center">What industries do you work with?</a>
+                        <a href="#faq-item-5" class="glass-card p-4 glass-hover text-center">How do I get started?</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== FAQ SEARCH + CATEGORIES ======== -->
+            <section id="faq-controls" class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <div class="faq-search-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faq-search" placeholder="Search for answers..." class="faq-search-input">
+                    </div>
+                    <div class="faq-categories">
+                        <button class="faq-category active" data-category="all">All Questions</button>
+                        <button class="faq-category" data-category="ai">AI Automation</button>
+                        <button class="faq-category" data-category="web">Web & Software</button>
+                        <button class="faq-category" data-category="marketing">Marketing</button>
+                        <button class="faq-category" data-category="general">General</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== FAQ LIST ======== -->
+            <section id="faq-list" class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <div id="faq-items">
+                        <!-- Category: AI -->
+                        <div class="faq-item" data-category="ai" id="faq-item-1">
+                            <button class="faq-question">
+                                <span><i class="fas fa-robot"></i> What is AI automation?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>AI automation uses artificial intelligence to automate repetitive tasks, customer
+                                    interactions, and data processing. It helps businesses save time, reduce costs, and
+                                    scale operations without hiring additional staff.</p>
+                                <a href="ai-automation.html" class="faq-related-link">Learn more about AI Automation
+                                    →</a>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="ai" id="faq-item-6">
+                            <button class="faq-question">
+                                <span><i class="fas fa-robot"></i> Do you build WhatsApp chatbots?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we develop WhatsApp chatbots for lead generation, customer support, and
+                                    automated messaging. Our chatbots integrate with your CRM and can handle thousands
+                                    of conversations simultaneously.</p>
+                                <a href="whatsapp-automation.html" class="faq-related-link">Learn more about WhatsApp
+                                    Automation →</a>
+                            </div>
+                        </div>
+
+                        <!-- Category: Web & Software -->
+                        <div class="faq-item" data-category="web" id="faq-item-2">
+                            <button class="faq-question">
+                                <span><i class="fas fa-laptop-code"></i> How much does a website cost?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Website costs range from <strong>$500</strong> for a simple landing page to
+                                    <strong>$10,000+</strong> for custom e-commerce and web applications. We provide
+                                    transparent quotes after a discovery call.
+                                </p>
+                                <a href="web-development.html" class="faq-related-link">Learn more about Web Development
+                                    →</a>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="web">
+                            <button class="faq-question">
+                                <span><i class="fas fa-mobile-alt"></i> Do you develop mobile apps?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we build native and cross-platform mobile apps for iOS and Android using React
+                                    Native, Flutter, and native technologies.</p>
+                                <a href="software-development.html" class="faq-related-link">Learn more about Software
+                                    Development →</a>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="web">
+                            <button class="faq-question">
+                                <span><i class="fas fa-code"></i> What is your process for software development?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We follow a 5-step process: <strong>Discovery</strong> (understand your needs),
+                                    <strong>Strategy</strong> (design the solution), <strong>Development</strong> (build
+                                    and test), <strong>Deployment</strong> (launch), and <strong>Optimization</strong>
+                                    (monitor and improve).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="web">
+                            <button class="faq-question">
+                                <span><i class="fas fa-plug"></i> Can you integrate with existing systems?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we can integrate with CRMs, ERPs, and other third-party platforms via REST APIs,
+                                    webhooks, and custom middleware.</p>
+                            </div>
+                        </div>
+
+                        <!-- Category: Marketing -->
+                        <div class="faq-item" data-category="marketing" id="faq-item-3">
+                            <button class="faq-question">
+                                <span><i class="fas fa-chart-line"></i> How long does SEO take to show results?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Typically <strong>3–6 months</strong> of consistent work before you see significant
+                                    traffic growth, depending on your industry, competition, and current website health.
+                                </p>
+                                <a href="seo-services.html" class="faq-related-link">Learn more about SEO Services →</a>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="marketing">
+                            <button class="faq-question">
+                                <span><i class="fas fa-bullhorn"></i> Can you help with digital marketing?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we offer SEO, social media management, content marketing, and paid advertising
+                                    services across Google, Meta, and LinkedIn.</p>
+                                <a href="digital-marketing.html" class="faq-related-link">Learn more about Digital
+                                    Marketing →</a>
+                            </div>
+                        </div>
+
+                        <!-- Category: General -->
+                        <div class="faq-item" data-category="general" id="faq-item-4">
+                            <button class="faq-question">
+                                <span><i class="fas fa-building"></i> What industries do you work with?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We work with <strong>education, healthcare, retail, e-commerce, NGOs, professional
+                                        services, and tech startups</strong>. We adapt our solutions to each industry's
+                                    unique needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <button class="faq-question">
+                                <span><i class="fas fa-dollar-sign"></i> How do you price your services?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We offer <strong>fixed-price, hourly, and retainer</strong> options depending on
+                                    project scope. We'll discuss what fits your budget during our initial consultation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <button class="faq-question">
+                                <span><i class="fas fa-life-ring"></i> Do you provide ongoing support?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we offer maintenance and support packages for all our solutions, including
+                                    security updates, bug fixes, and performance monitoring.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <button class="faq-question">
+                                <span><i class="fas fa-shield-alt"></i> Are your solutions GDPR compliant?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we follow best practices for data privacy and compliance in all our solutions.
+                                    We can also help you achieve compliance with specific regulations.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <button class="faq-question">
+                                <span><i class="fas fa-tasks"></i> How do you handle project management?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We use agile methodologies with regular updates via Slack, Trello, and weekly calls.
+                                    You'll always know exactly where we are in the project.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general">
+                            <button class="faq-question">
+                                <span><i class="fas fa-clock"></i> What is your turnaround time?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A landing page can be ready in <strong>1 week</strong>; a full web app may take
+                                    <strong>2–4 months</strong>. Timelines are always discussed and agreed upon before
+                                    starting.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item" data-category="general" id="faq-item-5">
+                            <button class="faq-question">
+                                <span><i class="fas fa-rocket"></i> How do I get started?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p><strong>Contact us</strong> via the form on this page or call us. We'll schedule a
+                                    free consultation to understand your needs and propose the right solution for you.
+                                </p>
+                                <a href="contact.html" class="faq-related-link">Contact us now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======== CTA ======== -->
+            <section id="faq-cta" class="text-center py-20 section-animate">
+                <div class="container glass-card glass-hover p-8">
+                    <h2 class="section-title text-balance">Still Have Questions?</h2>
+                    <p>Get in touch – we're here to help.</p>
+                    <a href="contact.html" class="btn-primary glow-on-hover mt-4">Contact Us</a>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>

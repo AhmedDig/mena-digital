@@ -1,102 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog – Mena Digital</title>
-    <meta name="description" content="Insights, tutorials, and news from Mena Digital.">
-    <script>
-        window.addEventListener('error', function (e) {
-            if (e.message && e.message.includes('receiving end does not exist')) {
-                e.preventDefault();
-                e.stopPropagation();
-                return true;
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/blog.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Blog – Mena Digital</title>
+        <meta name="description"
+            content="Insights, tutorials, and news from Mena Digital – AI, marketing, web development, and business growth.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="Blog – Mena Digital">
+        <meta property="og:description" content="Read our latest articles on AI, marketing, and development.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/blog.html">
+        <meta property="og:type" content="website">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Blog – Mena Digital">
+        <meta name="twitter:description" content="Latest insights from Mena Digital.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/blog.html">
+
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Critical CSS (same block as all pages) -->
+        <style>
+            /* Reset & Base */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box
             }
-        });
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <meta property="og:title" content="Mena Digital – Liquid Glass Portfolio">
-    <meta property="og:description"
-        content="Modern marketing, IT services, and creative portfolio with a stunning liquid glass design.">
-    <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-image.png">
-    <meta property="og:url" content="https://mena-digital.pages.dev/">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mena Digital – Liquid Glass Portfolio">
-    <meta name="twitter:description" content="Modern marketing, IT services, and creative portfolio.">
-    <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-image.png">
-</head>
 
-<body>
-    <div id="header-placeholder"></div>
-    <main>
-        <section id="blog-hero" class="text-center" style="padding-top: 8rem;">
-            <div class="container">
-                <h1 class="section-title text-balance">Mena Digital Blog</h1>
-                <p>Insights, tutorials, and news from our team.</p>
-            </div>
-        </section>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: var(--bg-light);
+                color: var(--text-dark);
+                transition: background-color .3s, color .3s
+            }
 
-        <section id="blog-posts" class="section-animate">
-            <div class="container">
-                <div class="blog-posts">
-                    <article class="blog-post">
-                        <i class="fas fa-file-alt fa-3x" style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
-                        <div class="post-meta">April 15, 2025 • 5 min read</div>
-                        <h2 class="section-title text-balance">Why Your Business Needs a Liquid Glass Website</h2>
-                        <p>Discover how modern design trends like liquid glass can elevate user experience and brand
-                            perception.</p>
-                        <a href="post.html?post=1" class="btn-secondary right-btn glow-on-hover">Read more →</a>
-                    </article>
-                    <article class="blog-post">
-                        <i class="fas fa-chart-simple fa-3x"
-                            style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
-                        <div class="post-meta">April 8, 2025 • 4 min read</div>
-                        <h2 class="section-title text-balance">Top 5 SEO Strategies for 2025</h2>
-                        <p>Stay ahead of the curve with these actionable SEO tactics backed by data.</p>
-                        <a href="post.html?post=2" class="btn-secondary right-btn glow-on-hover">Read more →</a>
-                    </article>
-                    <article class="blog-post">
-                        <i class="fas fa-code-branch fa-3x"
-                            style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
-                        <div class="post-meta">April 1, 2025 • 6 min read</div>
-                        <h2 class="section-title text-balance">From Idea to Launch: Our Web Development Process</h2>
-                        <p>A behind‑the‑scenes look at how we build high‑performance websites.</p>
-                        <a href="post.html?post=3" class="btn-secondary right glow-on-hover">Read more →</a>
-                    </article>
-                    <article class="blog-post">
-                        <i class="fas fa-moon fa-3x" style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
-                        <div class="post-meta">March 25, 2025 • 3 min read</div>
-                        <h2 class="section-title text-balance">Why Dark Mode is More Than Just a Trend</h2>
-                        <p>Learn the UX benefits and implementation tips for dark mode interfaces.</p>
-                        <a href="post.html?post=4" class="btn-secondary right glow-on-hover">Read more →</a>
-                    </article>
+            /* CSS Variables (Light) */
+            :root {
+                --primary: #091a2a;
+                --primary-dark: #010c14;
+                --primary-soft: #2196f3;
+                --accent: #ffc107;
+                --text-dark: #1F2937;
+                --text-muted: #4B5563;
+                --text-light: #f3f4f6;
+                --bg-light: #eee;
+                --surface: #fff;
+                --glass-bg: rgba(255, 255, 255, .25);
+                --glass-menu-bg: rgba(255, 255, 255, .85);
+                --glass-border: rgba(255, 255, 255, .4);
+                --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, .15);
+                --hero-overlay: rgba(0, 0, 0, .3);
+                --hero-bg: url('/assets/img/hero-light.webp');
+                --transition: all .3s ease;
+                --padd-section: 3rem;
+                --padd-element: 1.5rem;
+                --padd-button: .75rem 1.5rem;
+                --mar-section: 3rem 0;
+                --mar-element: 1.5rem 0
+            }
+
+            /* Dark Theme */
+            .dark {
+                --bg-light: #111;
+                --surface: #1e1e1e;
+                --text-dark: #EEE;
+                --text-muted: #9ca3af;
+                --text-light: #f3f4f6;
+                --glass-bg: rgba(0, 0, 0, .5);
+                --glass-menu-bg: rgba(0, 0, 0, .85);
+                --glass-border: rgba(255, 255, 255, .15);
+                --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, .3);
+                --hero-overlay: rgba(0, 0, 0, .6);
+                --hero-bg: url('/assets/img/hero-dark.webp')
+            }
+
+            .desktop-nav {
+                display: flex;
+                gap: var(--padd-section)
+            }
+
+            .nav-tab {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                gap: var(--padd-element)
+            }
+
+            .nav-link {
+                position: relative;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color .3s;
+                color: var(--text-muted);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: center
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background: var(--accent);
+                transition: width .3s
+            }
+
+            .nav-link:hover::after,
+            .active-nav-link::after {
+                width: 100%
+            }
+
+            .active-nav-link {
+                color: var(--accent)
+            }
+
+            #mobileMenuButton {
+                background: 0 0;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--text-dark);
+                display: none
+            }
+
+            /* Hero (generic) */
+            #blog-hero {
+                position: relative;
+                min-height: 40vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+                z-index: 1
+            }
+
+            .hero-content {
+                max-width: 700px;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                z-index: 2;
+                background: var(--glass-menu-bg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: 4px solid var(--glass-border);
+                border-radius: 30px
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+                font-weight: 800;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+                color: var(--primary)
+            }
+
+            .dark .hero-content h1 {
+                color: var(--accent)
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                opacity: .9
+            }
+
+            /* Buttons */
+            .btn-primary,
+            .btn-secondary {
+                display: inline-block;
+                padding: var(--padd-button);
+                border-radius: .75rem;
+                font-weight: 600;
+                transition: var(--transition);
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                border: none;
+                margin-top: var(--mar-element)
+            }
+
+            .btn-primary {
+                background: var(--primary);
+                color: var(--text-light)
+            }
+
+            .btn-secondary {
+                background: var(--accent);
+                color: var(--text-dark)
+            }
+
+            .glass-card {
+                background: var(--glass-bg);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--glass-border);
+                border-radius: 1.5rem;
+                box-shadow: var(--glass-shadow);
+                transition: transform .3s ease, box-shadow .3s ease;
+                padding: var(--padd-section)
+            }
+
+            .glass-hover {
+                transition: all .3s ease
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+                color: var(--primary-soft);
+                margin-bottom: 1rem;
+                display: inline-block
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-align: center;
+                color: var(--text-dark);
+                padding: var(--padd-element)
+            }
+
+            .dark .section-title {
+                color: var(--text-dark)
+            }
+
+            .text-balance {
+                text-wrap: balance
+            }
+
+            /* Blog List – vertical layout, no carousel */
+            .blog-list {
+                display: flex;
+                flex-direction: column;
+                gap: var(--padd-element);
+                padding: var(--padd-element);
+                align-items: stretch;
+                width: 100%;
+            }
+
+            .blog-list .blog-post {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: stretch;
+                justify-content: space-evenly;
+                align-items: stretch;
+                width: 100%;
+                min-height: 200px;
+                background: var(--glass-bg);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--glass-border);
+                border-radius: 1.5rem;
+                overflow: hidden;
+                transition: transform .3s, box-shadow .3s;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                text-align: left;
+                gap: 1rem;
+                text-decoration-line: none;
+            }
+
+            .blog-list .blog-post i {
+                font-size: 3rem;
+                color: var(--primary-soft);
+                align-self: flex-start;
+            }
+
+            .blog-list .blog-post h2 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                text-align: left;
+                padding: 0;
+            }
+
+            .blog-list .blog-post .post-meta {
+                font-size: .875rem;
+                color: var(--text-muted);
+                margin-bottom: 0.5rem;
+            }
+
+            .blog-list .blog-post .right-btn {
+                align-self: flex-start;
+                text-align: left;
+                display: inline-block;
+                padding: 0;
+            }
+
+            .right-btn {
+                align-self: flex-end !important;
+                padding: 0 var(--padd-section) !important;
+            }
+
+            /* Shape Divider (not used on blog, but kept) */
+            .shape-divider {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+                z-index: 2
+            }
+
+            .shape-divider svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 30px);
+                height: 125px;
+                margin-left: 0;
+                margin-bottom: -7px;
+                filter: blur(3px)
+            }
+
+            .shape-fill {
+                fill: var(--bg-light)
+            }
+
+            .dark .shape-fill {
+                fill: #111
+            }
+
+            /* Utilities */
+            .text-center {
+                text-align: center
+            }
+
+            .mt-10 {
+                margin-top: 2.5rem
+            }
+
+            .p-4 {
+                padding: 1rem
+            }
+
+            .p-6 {
+                padding: 1.5rem
+            }
+
+            .p-8 {
+                padding: 2rem
+            }
+
+            .gap-4 {
+                gap: 1rem
+            }
+
+            .flex {
+                display: flex
+            }
+
+            .flex-col {
+                flex-direction: column
+            }
+
+            .items-center {
+                align-items: center
+            }
+
+            .justify-center {
+                justify-content: center
+            }
+
+            .md\:w-1\/2 {
+                width: 50%
+            }
+
+            .md\:flex-row {
+                flex-direction: row
+            }
+
+            .w-full {
+                width: 100%
+            }
+
+            .mx-4 {
+                margin-left: 1rem;
+                margin-right: 1rem
+            }
+
+            .mb-8 {
+                margin-bottom: 2rem
+            }
+
+            .mt-3 {
+                margin-top: .75rem
+            }
+
+            .text-sm {
+                font-size: .875rem
+            }
+
+            .text-muted {
+                color: var(--text-muted)
+            }
+
+            .text-xl {
+                font-size: 1.25rem;
+                font-weight: 700
+            }
+
+            .text-primarySoft {
+                color: var(--primary-soft)
+            }
+
+            .px-3 {
+                padding-left: .75rem;
+                padding-right: .75rem
+            }
+
+            .py-1 {
+                padding-top: .25rem;
+                padding-bottom: .25rem
+            }
+
+            .gap-2 {
+                gap: .5rem
+            }
+
+            .gap-8 {
+                gap: 2rem
+            }
+
+            .mt-4 {
+                margin-top: 1rem
+            }
+
+            .mb-4 {
+                margin-bottom: 1rem
+            }
+
+            .py-20 {
+                padding-top: 5rem;
+                padding-bottom: 5rem
+            }
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <section id="blog-hero" class="text-center">
+                <div class="container glass-card glass-hover">
+                    <h1 class="section-title text-balance">Mena Digital Blog</h1>
+                    <p>Insights, tutorials, and news from our team.</p>
                 </div>
-                <div class="text-center mt-10">
-                    <a href="#" class="btn-secondary glow-on-hover">← Previous</a>
-                    <span class="mx-4">Page 1 of 3</span>
-                    <a href="#" class="btn-secondary glow-on-hover">Next →</a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="blog-newsletter" class="section-animate glass-card p-8 text-center"
-            style="max-width: 600px; margin: 2rem auto;">
-            <h3 class="section-title text-balance">Subscribe to our newsletter</h3>
-            <p>Get the latest articles straight to your inbox.</p>
-            <form id="newsletterForm" class="flex gap-4" style="justify-content: center;">
-                <input type="email" placeholder="Your email address" required style="max-width: 300px;">
-                <button type="submit" class="btn-primary glow-on-hover">Subscribe</button>
-            </form>
-        </section>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script src="assets/js/menu.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+            <section id="blog-posts" class="section-animate visible">
+                <div class="container">
+                    <!-- Changed class from blog-posts to blog-list to avoid carousel -->
+                    <div class="blog-list">
+                        <article class="blog-post">
+                            <i class="fas fa-file-alt fa-3x"
+                                style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                            <div class="post-meta">April 15, 2025 • 5 min read</div>
+                            <h2 class="section-title text-balance">Why Your Business Needs a Liquid Glass Website</h2>
+                            <p>Discover how modern design trends like liquid glass can elevate user experience and brand
+                                perception.</p>
+                            <a href="post.html?post=1" class="btn-secondary right-btn glow-on-hover">Read more →</a>
+                        </article>
+                        <article class="blog-post">
+                            <i class="fas fa-chart-simple fa-3x"
+                                style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                            <div class="post-meta">April 8, 2025 • 4 min read</div>
+                            <h2 class="section-title text-balance">Top 5 SEO Strategies for 2025</h2>
+                            <p>Stay ahead of the curve with these actionable SEO tactics backed by data.</p>
+                            <a href="post.html?post=2" class="btn-secondary right-btn glow-on-hover">Read more →</a>
+                        </article>
+                        <article class="blog-post">
+                            <i class="fas fa-code-branch fa-3x"
+                                style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                            <div class="post-meta">April 1, 2025 • 6 min read</div>
+                            <h2 class="section-title text-balance">From Idea to Launch: Our Web Development Process</h2>
+                            <p>A behind‑the‑scenes look at how we build high‑performance websites.</p>
+                            <a href="post.html?post=3" class="btn-secondary right-btn glow-on-hover">Read more →</a>
+                        </article>
+                        <article class="blog-post">
+                            <i class="fas fa-moon fa-3x" style="color: var(--primary-soft); margin-bottom: 1rem;"></i>
+                            <div class="post-meta">March 25, 2025 • 3 min read</div>
+                            <h2 class="section-title text-balance">Why Dark Mode is More Than Just a Trend</h2>
+                            <p>Learn the UX benefits and implementation tips for dark mode interfaces.</p>
+                            <a href="post.html?post=4" class="btn-secondary right-btn glow-on-hover">Read more →</a>
+                        </article>
+                    </div>
+                    <!-- Removed broken pagination links -->
+                </div>
+            </section>
+
+            <section id="blog-newsletter" class="section-animate glass-card p-8 text-center"
+                style="max-width: 600px; margin: 2rem auto;">
+                <h3 class="section-title text-balance">Subscribe to our newsletter</h3>
+                <p>Get the latest articles straight to your inbox.</p>
+                <form id="newsletterForm" class="flex gap-4" style="justify-content: center;">
+                    <input type="email" placeholder="Your email address" required style="max-width: 300px;">
+                    <button type="submit" class="btn-primary glow-on-hover">Subscribe</button>
+                </form>
+            </section>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
 
 </html>

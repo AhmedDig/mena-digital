@@ -1,150 +1,643 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mena Digital – Portfolio</title>
-    <meta name="description"
-        content="Mena Digital – modern marketing, IT services, and creative portfolio. Liquid glass design.">
-    <!-- Suppress Chrome extension error -->
-    <script>
-        window.addEventListener('error', function (e) {
-            if (e.message && e.message.includes('receiving end does not exist')) {
-                e.preventDefault();
-                e.stopPropagation();
-                return true;
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Hero image preloads -->
+        <link rel="preload" as="image" href="assets/img/hero-light.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="assets/img/hero-dark.webp" fetchpriority="high">
+
+        <!-- Primary meta -->
+        <title>Mena Digital – AI, Marketing & Software Development Agency</title>
+        <meta name="description"
+            content="Mena Digital helps businesses grow through AI automation, web development, SEO, digital marketing, and creative solutions. Based in Bethlehem, West Bank.">
+        <meta name="robots" content="index, follow">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Mena Digital – AI, Marketing & Software Agency">
+        <meta property="og:description"
+            content="AI automation, web development, SEO, digital marketing, and creative solutions for businesses.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Mena Digital">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Mena Digital – AI, Marketing & Software">
+        <meta name="twitter:description"
+            content="AI automation, web development, digital marketing, and creative solutions.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <!-- Geo & hreflang -->
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts – Asynchronous (non‑blocking) -->
+        <link rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+        </noscript>
+
+        <!-- ===== SCHEMA: ORGANIZATION ===== -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mena Digital",
+            "description": "AI automation, web development, digital marketing, and creative solutions for businesses.",
+            "url": "https://mena-digital.pages.dev",
+            "logo": "https://mena-digital.pages.dev/assets/img/logo.svg",
+            "email": "menadigital.digital@gmail.com",
+            "telephone": "+972568535126",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bethlehem",
+                "addressRegion": "West Bank",
+                "addressCountry": "PS"
+            },
+            "sameAs": [
+                "https://www.facebook.com/Menadigital.media/",
+                "https://www.instagram.com/menadigital.media/",
+                "https://x.com/Menadigital_dig",
+                "https://www.youtube.com/channel/UC4vo3R3BrEt1ar0Os6pfKRw",
+                "https://www.pinterest.com/menadigitaldigital/"
+            ]
+        }
+        </script>
+
+        <!-- ===== SCHEMA: WEBSITE ===== -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://mena-digital.pages.dev",
+            "name": "Mena Digital",
+            "description": "AI automation, web development, digital marketing, and creative solutions.",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://mena-digital.pages.dev/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
             }
-        });
-    </script>
-    <!-- Font Awesome (CSS only) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Milestone 2 CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <meta property="og:title" content="Mena Digital – Liquid Glass Portfolio">
-    <meta property="og:description"
-        content="Modern marketing, IT services, and creative portfolio with a stunning liquid glass design.">
-    <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-image.png">
-    <meta property="og:url" content="https://mena-digital.pages.dev/">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mena Digital – Liquid Glass Portfolio">
-    <meta name="twitter:description" content="Modern marketing, IT services, and creative portfolio.">
-    <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-image.png">
-</head>
+        }
+        </script>
 
-<body>
+        <!-- ===== CRITICAL CSS (FULL ABOVE‑THE‑FOLD, INCLUDING MOBILE MENU) ===== -->
+        <style>
+            .desktop-nav {
+                display: flex;
+                gap: var(--padd-section)
+            }
 
-    <div id="header-placeholder"></div>
+            .nav-tab {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                gap: var(--padd-element)
+            }
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-content portfolio.html">
-                <h1>Transforming <span class="text-gradient">Ideas</span> into Digital <span
-                        class="text-gradient">Reality</span></h1>
-                <p>Mena Digital – marketing, IT services, and creative solutions.</p>
-                <div>
-                    <a href="services.html" class="btn-primary glow-on-hover">Explore Services</a>
-                    <a href="portfolio.html" class="btn-secondary glow-on-hover">View Portfolio</a>
+            .nav-link {
+                position: relative;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color .3s;
+                color: var(--text-muted);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                align-content: center
+            }
+
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -4px;
+                left: 0;
+                background: var(--accent);
+                transition: width .3s
+            }
+
+            .nav-link:hover::after,
+            .active-nav-link::after {
+                width: 100%
+            }
+
+            .active-nav-link {
+                color: var(--accent)
+            }
+
+            #mobileMenuButton {
+                background: 0 0;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--text-dark);
+                display: none
+            }
+
+            /* ---- Mobile Menu (inlined critical styles) ---- */
+            #mobileMenu {
+                display: none;
+                background: var(--glass-menu-bg);
+                backdrop-filter: blur(12px);
+                border-top: 1px solid var(--accent);
+                padding: var(--padd-section);
+            }
+
+            #mobileMenu.show {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 999;
+                overflow-y: auto;
+            }
+
+            #mobileMenu a,
+            #mobileMenu button {
+                display: block;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                text-decoration: none;
+            }
+
+            #mobileMenu a {
+                padding: .75rem 0;
+                border-bottom: 1px solid var(--glass-border);
+            }
+
+            #mobileMenu a:last-child {
+                border-bottom: none;
+            }
+
+            /* ---- Hero ---- */
+            #hero {
+                position: relative;
+                min-height: 70vh;
+                background-image: var(--hero-bg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                overflow: hidden;
+                z-index: 1
+            }
+
+            #hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--hero-overlay)
+            }
+
+            .hero-content {
+                max-width: 700px;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                z-index: 2;
+                background: var(--glass-menu-bg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: 4px solid var(--glass-border);
+                border-radius: 30px
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+                color: var(--primary)
+            }
+
+            .dark .hero-content h1 {
+                color: var(--accent)
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                opacity: .9
+            }
+
+            /* ---- Buttons ---- */
+            .btn-primary,
+            .btn-secondary {
+                display: inline-block;
+                padding: var(--padd-button);
+                border-radius: .75rem;
+                font-weight: 600;
+                transition: var(--transition);
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                border: none;
+                margin-top: var(--mar-element)
+            }
+
+            .btn-primary {
+                background: var(--primary);
+                color: var(--text-light)
+            }
+
+            .btn-secondary {
+                background: var(--accent);
+                color: var(--text-dark)
+            }
+
+            /* ---- Grids ---- */
+            .services-grid {
+                display: flex;
+                flex-direction: row;
+                gap: var(--padd-element);
+                padding: var(--padd-element);
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+                flex: 0 1 33%
+            }
+
+            .service-card-h {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                flex: 1 1 20%;
+                min-height: 300px;
+                background: var(--glass-bg);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--glass-border);
+                border-radius: 1.5rem;
+                overflow: hidden;
+                transition: transform .3s, box-shadow .3s;
+                padding: var(--padd-element);
+                color: var(--text-dark);
+                text-align: center;
+                gap: 2rem;
+                text-decoration-line: none;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
+
+            .service-card-h i {
+                font-size: 5rem;
+                color: var(--primary-soft);
+                align-self: center;
+                justify-self: center;
+                justify-items: center
+            }
+
+            .service-card-h h3 {
+                margin-bottom: .5rem
+            }
+
+            /* ---- Utility (for immediate layout) ---- */
+            .text-center {
+                text-align: center
+            }
+
+            .mt-10 {
+                margin-top: 2.5rem
+            }
+
+            .p-4 {
+                padding: 1rem
+            }
+
+            .p-6 {
+                padding: 1.5rem
+            }
+
+            .p-8 {
+                padding: 2rem
+            }
+
+            .gap-4 {
+                gap: 1rem
+            }
+
+            .flex {
+                display: flex
+            }
+
+            .flex-col {
+                flex-direction: column
+            }
+
+            .items-center {
+                align-items: center
+            }
+
+            .justify-center {
+                justify-content: center
+            }
+
+            .md\:w-1\/2 {
+                width: 50%
+            }
+
+            .md\:flex-row {
+                flex-direction: row
+            }
+
+            .w-full {
+                width: 100%
+            }
+        </style>
+
+        <!-- ===== NON-BLOCKING CSS ===== -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Load Font Awesome non-blocking -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <!-- ===== SUPPRESS CHROME EXTENSION ERROR ===== -->
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- ======== HERO ======== -->
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>AI Automation, Digital Marketing &amp; Software Development Services</h1>
+                    <p>We help businesses grow through AI, web development, and digital marketing solutions.</p>
+                    <div>
+                        <a href="services.html" class="btn-primary glow-on-hover">Explore Services</a>
+                        <a href="contact.html" class="btn-secondary glow-on-hover">Get a Free Quote</a>
+                    </div>
                 </div>
-            </div>
-            <div class="shape-divider">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path class="shape-fill"
-                        d="M0,120V73.71c47.79-22.2,103.59-32.17,158-28,70.36,5.37,136.33,33.31,206.8,37.5C438.64,87.57,512.34,66.33,583,47.95c69.27-18,138.3-24.88,209.4-13.08,36.15,6,69.85,17.84,104.45,29.34C989.49,95,1113,134.29,1200,67.53V120Z">
-                    </path>
-                </svg>
-            </div>
-        </section>
+            </section>
 
-        <!-- Services Preview -->
-        <section id="services-preview" class="section-animate">
-            <div class="container glass-card p-6 glass-hover">
-                <h2 class="section-title text-balance">Our Services</h2>
-                <p class="text-center">Comprehensive solutions – from marketing to full‑stack development.</p>
-                <div class="services-grid">
-                    <div class="service-card-h glass-card p-6 glass-hover">
-                        <i class="fas fa-bullhorn card-icon"></i>
-                        <h3>Marketing</h3>
-                        <p>SEO, social media, content strategy.</p>
-                    </div>
-                    <div class="service-card-h glass-card p-6 glass-hover">
-                        <i class="fas fa-laptop-code card-icon"></i>
-                        <h3>IT Services</h3>
-                        <p>Web & app development, cloud, consulting.</p>
-                    </div>
-                    <div class="service-card-h glass-card p-6 glass-hover">
-                        <i class="fas fa-paintbrush card-icon"></i>
-                        <h3>Creative Design</h3>
-                        <p>UI/UX, branding, motion graphics.</p>
+            <!-- ======== INDUSTRIES WE SERVE ======== -->
+            <section id="industries" class="section-animate">
+                <div class="container glass-card p-6 glass-hover">
+                    <h2 class="section-title text-balance">Industries We Serve</h2>
+                    <p class="text-center">We help businesses across multiple sectors achieve digital transformation.
+                    </p>
+                    <div class="services-grid lg:w-full sm:w-1/4">
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-graduation-cap card-icon"></i>
+                                <h3>Education</h3>
+                            </div>
+                            <p>AI-powered learning platforms, student management, and marketing.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-heartbeat card-icon"></i>
+                                <h3>Healthcare</h3>
+                            </div>
+                            <p>Patient management, telemedicine, and AI-assisted diagnostics.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-shopping-bag card-icon"></i>
+                                <h3>Retail &amp; E-commerce</h3>
+                            </div>
+                            <p>Online stores, automation, and customer engagement tools.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-hand-holding-heart card-icon"></i>
+                                <h3>NGOs &amp; Non-profits</h3>
+                            </div>
+                            <p>Donor management, campaign automation, and outreach.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-briefcase card-icon"></i>
+                                <h3>Professional Services</h3>
+                            </div>
+                            <p>Consulting, legal, and financial automation.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-rocket card-icon"></i>
+                                <h3>Tech &amp; Startups</h3>
+                            </div>
+                            <p>MVP development, AI integration, and growth hacking.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center mt-10">
-                    <a href="services.html" class="btn-secondary glow-on-hover">View all services →</a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Portfolio Preview (icons instead of images) -->
-        <section id="portfolio-preview" class="section-animate">
-            <div class="container glass-card glass-hover">
-                <h2 class="section-title text-balance">Featured Projects</h2>
-                <p class="text-center">A glimpse at our recent work – crafted with passion and precision.</p>
-                <div class="projects-grid">
-                    <div class="projects-item">
-                        <i class="fas fa-globe fa-3x card-icon"></i>
-                        <h3>Corporate Website</h3>
-                        <p>Modern redesign + 150% engagement boost.</p>
-                        <a href="portfolio.html" class="btn-secondary glow-on-hover">View case study →</a>
+            <!-- ======== SERVICES ======== -->
+            <section id="services-preview" class="section-animate">
+                <div class="container glass-card p-6 glass-hover">
+                    <h2 class="section-title text-balance">Our Services</h2>
+                    <p class="text-center">Comprehensive solutions – from AI to full‑stack development.</p>
+                    <div class="services-grid lg:w-full sm:w-1/4">
+                        <div class="service-card-h glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-robot card-icon"></i>
+                                <h3>AI Automation</h3>
+                            </div>
+                            <p>Automate workflows, customer support, and data processing with AI.</p>
+                            <a href="/services/ai-automation.html" class="btn-secondary glow-on-hover">Learn More →</a>
+                        </div>
+                        <div class="service-card-h glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-chart-line card-icon"></i>
+                                <h3>Digital Marketing</h3>
+                            </div>
+                            <p>SEO, social media, content marketing, and paid advertising.</p>
+                            <a href="/services/digital-marketing.html" class="btn-secondary glow-on-hover">Learn More
+                                →</a>
+                        </div>
+                        <div class="service-card-h glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-laptop-code card-icon"></i>
+                                <h3>Web Development</h3>
+                            </div>
+                            <p>Custom websites, e-commerce, and web applications.</p>
+                            <a href="/services/web-development.html" class="btn-secondary glow-on-hover">Learn More
+                                →</a>
+                        </div>
+                        <div class="service-card-h glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-code card-icon"></i>
+                                <h3>Software Development</h3>
+                            </div>
+                            <p>Custom software, mobile apps, and business automation tools.</p>
+                            <a href="/services/software-development.html" class="btn-secondary glow-on-hover">Learn More
+                                →</a>
+                        </div>
+                        <div class="service-card-h glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-search card-icon"></i>
+                                <h3>SEO Services</h3>
+                            </div>
+                            <p>Search engine optimization to rank higher and get more traffic.</p>
+                            <a href="/services/seo-services.html" class="btn-secondary glow-on-hover">Learn More →</a>
+                        </div>
+                        <div class="service-card-h glass-card p-6 glass-hover">
+                            <div class="card-header">
+                                <i class="fab fa-whatsapp card-icon"></i>
+                                <h3>WhatsApp Automation</h3>
+                            </div>
+                            <p>Automate WhatsApp business communication and lead generation.</p>
+                            <a href="/services/whatsapp-automation.html" class="btn-secondary glow-on-hover">Learn More
+                                →</a>
+                        </div>
                     </div>
-                    <div class="projects-item">
-                        <i class="fas fa-mobile-alt fa-3x card-icon"></i>
-                        <h3>E‑commerce App</h3>
-                        <p>React Native, 10k+ downloads.</p>
-                        <a href="portfolio.html" class="btn-secondary glow-on-hover">View case study →</a>
-                    </div>
-                    <div class="projects-item">
-                        <i class="fas fa-chart-line fa-3x card-icon"></i>
-                        <h3>Analytics Dashboard</h3>
-                        <p>Real‑time data visualization.</p>
-                        <a href="portfolio.html" class="btn-secondary glow-on-hover">View case study →</a>
+                    <div class="text-center mt-10">
+                        <a href="/services/" class="btn-primary glow-on-hover">View All Services</a>
                     </div>
                 </div>
-                <div class="text-center mt-10">
-                    <a href="portfolio.html" class="btn-primary glow-on-hover">View Full Portfolio</a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- About / Contact Teaser -->
-        <section id="about-teaser" class="section-animate">
-            <div class="container flex flex-col md:flex-row gap-8 items-center ">
-                <div class="md:w-1/2">
-                    <div class="glass-card p-8 gap-4 glass-hover flex center flex-col items-center">
-                        <h2>Who We Are</h2>
-                        <p>Mena Digital is a team of strategists, designers, and engineers who believe in the power of
-                            digital to transform businesses.</p>
-                        <a href="about.html" class="btn-secondary">Learn about us</a>
+            <!-- ======== WHY CHOOSE US ======== -->
+            <section id="why-us" class="section-animate">
+                <div class="container glass-card p-6 glass-hover">
+                    <h2 class="section-title text-balance">Why Businesses Choose Mena Digital</h2>
+                    <p class="text-center">We deliver results that matter.</p>
+                    <div class="services-grid lg:w-full sm:w-1/4">
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-users card-icon"></i>
+                                <h3>10+ Years Experience</h3>
+                            </div>
+                            <p>Combined team expertise in AI, marketing, and software.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-chart-simple card-icon"></i>
+                                <h3>Proven Results</h3>
+                            </div>
+                            <p>50+ satisfied clients with measurable growth.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-gear card-icon"></i>
+                                <h3>End-to-End Solutions</h3>
+                            </div>
+                            <p>All services under one roof – from strategy to deployment.</p>
+                        </div>
+                        <div class="service-card-h glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-handshake card-icon"></i>
+                                <h3>Transparent Pricing</h3>
+                            </div>
+                            <p>Clear communication and fair pricing with no hidden fees.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="md:w-1/2">
-                    <div class="glass-card p-8 gap-4 glass-hover flex center flex-col items-center">
-                        <h3>Let's Talk</h3>
-                        <p>Have a project in mind? We'd love to hear about it.</p>
-                        <a href="contact.html" class="btn-primary">Get in touch</a>
+            </section>
+
+            <!-- ======== PORTFOLIO PREVIEW ======== -->
+            <section id="portfolio-preview" class="section-animate">
+                <div class="container glass-card glass-hover">
+                    <h2 class="section-title text-balance">Featured Projects</h2>
+                    <p class="text-center">A glimpse at our recent work – crafted with passion and precision.</p>
+                    <div class="projects-grid lg:w-full sm:w-1/4">
+                        <div class="projects-item glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-globe fa-3x card-icon"></i>
+                                <h3>Corporate Website</h3>
+                            </div>
+                            <p>Modern redesign + 150% engagement boost.</p>
+                            <a href="/portfolio/" class="btn-secondary glow-on-hover">View case study →</a>
+                        </div>
+                        <div class="projects-item glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-robot fa-3x card-icon"></i>
+                                <h3>AI Chatbot</h3>
+                            </div>
+                            <p>WhatsApp automation for lead generation.</p>
+                            <a href="/portfolio/" class="btn-secondary glow-on-hover">View case study →</a>
+                        </div>
+                        <div class="projects-item glass-card p-4 text-center glass-hover">
+                            <div class="card-header">
+                                <i class="fas fa-chart-line fa-3x card-icon"></i>
+                                <h3>Analytics Dashboard</h3>
+                            </div>
+                            <p>Real‑time data visualization for businesses.</p>
+                            <a href="/portfolio/" class="btn-secondary glow-on-hover">View case study →</a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-10">
+                        <a href="/portfolio/" class="btn-primary glow-on-hover">View Full Portfolio</a>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <div id="footer-placeholder"></div>
+            <!-- ======== ABOUT / CONTACT TEASER ======== -->
+            <section id="about-teaser" class="section-animate">
+                <div class="container flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/2">
+                        <div class="glass-card p-8 gap-4 glass-hover flex center flex-col items-center">
+                            <h2>Who We Are</h2>
+                            <p>Mena Digital is a team of strategists, designers, and engineers who believe in the power
+                                of digital to transform businesses.</p>
+                            <a href="about.html" class="btn-secondary">Learn about us</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="glass-card p-8 gap-4 glass-hover flex center flex-col items-center">
+                            <h3>Let's Talk</h3>
+                            <p>Have a project in mind? We'd love to hear about it.</p>
+                            <a href="contact.html" class="btn-primary">Get in touch</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    <script src="assets/js/menu.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
+        <div id="footer-placeholder"></div>
+
+        <!-- ===== SCRIPTS DEFERRED ===== -->
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
 
 </html>

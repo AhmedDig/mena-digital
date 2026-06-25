@@ -1,0 +1,286 @@
+/* Font Awesome custom subset – only icons used on Mena Digital site */
+
+/* ----- Font Face definitions (same as before, but we keep only needed weights) ----- */
+@font-face {
+    font-family: "Font Awesome 7 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Font Awesome 7 Brands";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Font Awesome 7 Free";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../webfonts/fa-regular-400.woff2") format("woff2");
+}
+
+/* ----- Base icon styles (same as before, simplified) ----- */
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fas,
+.fa-solid {
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+}
+
+.far,
+.fa-regular {
+    font-family: "Font Awesome 7 Free";
+    font-weight: 400;
+}
+
+.fab,
+.fa-brands {
+    font-family: "Font Awesome 7 Brands";
+    font-weight: 400;
+}
+
+/* ----- Only used icons (map class => unicode) ----- */
+.fa-house:before {
+    content: "\f015";
+}
+
+.fa-gears:before {
+    content: "\f085";
+}
+
+.fa-folder-open:before {
+    content: "\f07c";
+}
+
+.fa-blog:before {
+    content: "\f781";
+}
+
+.fa-mobile:before {
+    content: "\f3ce";
+}
+
+.fa-school:before {
+    content: "\f549"
+}
+
+.fa-robot:before {
+    content: "\f544";
+}
+
+.fa-chart-line:before {
+    content: "\f201";
+}
+
+.fa-laptop-code:before {
+    content: "\f5fc";
+}
+
+.fa-code:before {
+    content: "\f121";
+}
+
+.fa-search:before {
+    content: "\f002";
+}
+
+.fa-graduation-cap:before {
+    content: "\f19d";
+}
+
+.fa-heartbeat:before {
+    content: "\f21e";
+}
+
+.fa-shopping-bag:before {
+    content: "\f290";
+}
+
+.fa-hand-holding-heart:before {
+    content: "\f4be";
+}
+
+.fa-briefcase:before {
+    content: "\f0b1";
+}
+
+.fa-rocket:before {
+    content: "\f135";
+}
+
+.fa-users:before {
+    content: "\f0c0";
+}
+
+.fa-chart-simple:before {
+    content: "\e473";
+}
+
+.fa-gear:before {
+    content: "\f013";
+}
+
+.fa-handshake:before {
+    content: "\f2b5";
+}
+
+.fa-globe:before {
+    content: "\f0ac";
+}
+
+.fa-phone-alt:before {
+    content: "\f879";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+}
+
+.fa-clock:before {
+    content: "\f017";
+}
+
+.fa-chevron-left:before {
+    content: "\f053";
+}
+
+.fa-chevron-right:before {
+    content: "\f054";
+}
+
+.fa-chevron-down:before {
+    content: "\f078";
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+}
+
+.fa-sun:before {
+    content: "\f185";
+}
+
+.fa-moon:before {
+    content: "\f186";
+}
+
+.fa-user-circle:before {
+    content: "\f2bd";
+}
+
+.fa-file-alt:before {
+    content: "\f15c";
+}
+
+.fa-code-branch:before {
+    content: "\f126";
+}
+
+.fa-heart:before {
+    content: "\f004";
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+
+.fa-eye:before {
+    content: "\f06e";
+}
+
+.fa-bullseye:before {
+    content: "\f140";
+}
+
+.fa-pen-fancy:before {
+    content: "\f5ac";
+}
+
+.fa-ad:before {
+    content: "\f641";
+}
+
+.fa-paint-brush:before {
+    content: "\f1fc";
+}
+
+.fa-share-alt:before {
+    content: "\f1e0";
+}
+
+.fa-envelope-open-text:before {
+    content: "\f658";
+}
+
+/* Brand icons */
+.fa-facebook-f:before {
+    content: "\f39e";
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+
+.fa-youtube:before {
+    content: "\f167";
+}
+
+.fa-linkedin-in:before {
+    content: "\f0e1";
+}
+
+.fa-whatsapp:before {
+    content: "\f232";
+}
+
+.fa-cubes:before {
+    content: "\f1b3";
+}
+
+.fa-network-wired:before{
+    content: "\f6ff";
+}
+
+.fa-wallet:before{
+    content: "\f555";
+}
+
+/* Optional: if you use fa-3x etc., you can keep the size classes from the original, but they are tiny */
+.fa-3x {
+    font-size: 3em;
+}
+
+.fa-5x {
+    font-size: 5em;
+}
+
+/* Add any other size classes you use (fa-2x, fa-4x, etc.) if needed – but they are not many */

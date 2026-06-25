@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/templates/
+Disallow: /assets/img/
+Sitemap: https://mena-digital.pages.dev/sitemap.xml

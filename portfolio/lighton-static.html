@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/portfolio/lighton-static.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Lighton Static – Serverless Assessment Platform | Mena Digital</title>
+        <meta name="description"
+            content="A fully static, serverless bilingual educational platform with an adaptive placement test and lead capture via Google Sheets.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="Lighton Static – Serverless Assessment Platform">
+        <meta property="og:description"
+            content="Static, bilingual, adaptive placement test with zero server maintenance.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/portfolio/lighton-static.html">
+        <meta property="og:type" content="article">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Lighton Static – Serverless Assessment Platform">
+        <meta name="twitter:description" content="Adaptive placement test + lead capture without a server.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/portfolio/lighton-static.html">
+
+        <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Critical CSS (same block) -->
+        <style>
+            /* same critical CSS block */
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- Hero -->
+            <section class="text-center section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h1 class="section-title text-balance">Lighton Static – Serverless Assessment Platform</h1>
+                    <p>Fully static, bilingual educational platform with adaptive placement testing – built without a
+                        traditional backend.</p>
+                </div>
+            </section>
+
+            <!-- Overview -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Project Overview</h2>
+                    <p class="text-center" style="font-size: 1.05rem; max-width: 800px; margin: 0 auto;">
+                        Lighton Static is a completely serverless educational platform built for Lighton Academy. It
+                        delivers a dynamic, adaptive 60‑question placement test that assesses English proficiency
+                        (A1–C2)
+                        with a unique set of questions per user. The entire application is static HTML, CSS, and
+                        JavaScript, served via Cloudflare Pages. All data – including the question bank and student
+                        leads – is managed through Google Sheets, with a Cloudflare Worker acting as a secure API proxy.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Challenge & Solution -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/2">
+                            <h2 class="section-title text-balance" style="font-size: 1.8rem;">The Challenge</h2>
+                            <p>The academy needed a scalable, cost‑effective way to:</p>
+                            <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem;">
+                                <li>Deliver a reliable placement test to thousands of prospective students</li>
+                                <li>Prevent cheating by randomising questions per user</li>
+                                <li>Collect lead data securely without managing a backend server</li>
+                                <li>Support both English and Arabic seamlessly</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <h2 class="section-title text-balance" style="font-size: 1.8rem;">The Solution</h2>
+                            <p>We built a fully serverless architecture:</p>
+                            <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem;">
+                                <li><strong>Static frontend</strong> – pure HTML/CSS/JS, hosted on Cloudflare Pages</li>
+                                <li><strong>Adaptive test engine</strong> – weighted question distribution (60
+                                    questions, 6 levels)</li>
+                                <li><strong>Cloudflare Worker</strong> – secure proxy that hides the backend URLs</li>
+                                <li><strong>Google Sheets</strong> – lightweight database for questions and leads</li>
+                                <li><strong>Bilingual UI</strong> – instant language switching with RTL/LTR support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Technology Stack</h2>
+                    <div class="services-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:1rem;">
+                        <div class="glass-card p-4 text-center"><strong>HTML5/CSS3</strong><br>Frontend</div>
+                        <div class="glass-card p-4 text-center"><strong>Vanilla JS</strong><br>Logic &amp; DOM</div>
+                        <div class="glass-card p-4 text-center"><strong>Cloudflare Pages</strong><br>Hosting</div>
+                        <div class="glass-card p-4 text-center"><strong>Cloudflare Workers</strong><br>API Proxy</div>
+                        <div class="glass-card p-4 text-center"><strong>Google Apps Script</strong><br>Backend</div>
+                        <div class="glass-card p-4 text-center"><strong>Google Sheets</strong><br>Database</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Key Outcomes</h2>
+                    <div class="services-grid" style="grid-template-columns: repeat(3,1fr); gap:1rem;">
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">60</strong>
+                            <p>Questions per test</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">100%</strong>
+                            <p>Randomised per user</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">$0</strong>
+                            <p>Server maintenance costs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Links -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover text-center">
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="/portfolio/" class="btn-secondary glow-on-hover">← Back to Portfolio</a>
+                        <a href="/contact.html" class="btn-primary glow-on-hover">Discuss a Similar Project</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>

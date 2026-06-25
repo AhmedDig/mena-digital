@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="canonical" href="https://mena-digital.pages.dev/portfolio/deskpro360.html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Deskpro360 – Business Management Suite | Mena Digital</title>
+        <meta name="description"
+            content="Deskpro360 is a modular SaaS platform for inventory, POS, and customer management built with Django and HTMX.">
+        <meta name="robots" content="index, follow">
+
+        <meta property="og:title" content="Deskpro360 – Business Management Suite">
+        <meta property="og:description"
+            content="All‑in‑one inventory, POS, and customer management for small/medium businesses.">
+        <meta property="og:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+        <meta property="og:url" content="https://mena-digital.pages.dev/portfolio/deskpro360.html">
+        <meta property="og:type" content="article">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Deskpro360 – Business Management Suite">
+        <meta name="twitter:description" content="All‑in‑one inventory, POS, and customer management.">
+        <meta name="twitter:image" content="https://mena-digital.pages.dev/assets/img/og-cover.webp">
+
+        <meta name="geo.region" content="PS">
+        <link rel="alternate" hreflang="en" href="https://mena-digital.pages.dev/portfolio/deskpro360.html">
+
+        <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+        <!-- Preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <!-- Critical CSS (same block) -->
+        <style>
+            /* Paste the critical CSS block from index.html here */
+        </style>
+
+        <!-- Non-blocking main stylesheet -->
+        <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/styles.css">
+        </noscript>
+
+        <!-- Non-blocking Font Awesome -->
+        <link rel="preload" href="/assets/fontawesome/css/all.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+        </noscript>
+
+        <script>
+            window.addEventListener('error', function (e) {
+                if (e.message && e.message.includes('receiving end does not exist')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return true;
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- Hero -->
+            <section class="text-center section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h1 class="section-title text-balance">Deskpro360 – Business Management Suite</h1>
+                    <p>All‑in‑one inventory, POS, and customer management for small/medium businesses.</p>
+                </div>
+            </section>
+
+            <!-- Overview -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Project Overview</h2>
+                    <p class="text-center" style="font-size: 1.05rem; max-width: 800px; margin: 0 auto;">
+                        Deskpro360 is a modular SaaS platform designed for small and medium businesses. It combines
+                        inventory management, point of sale (POS), customer relationship management, and sales analytics
+                        into a single, multi‑tenant system. The platform supports offline sales, real‑time stock
+                        updates,
+                        and role‑based access – making it ideal for retail, wholesale, and service‑based businesses.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Challenge & Solution -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-1/2">
+                            <h2 class="section-title text-balance" style="font-size: 1.8rem;">The Challenge</h2>
+                            <p>Many small businesses rely on disconnected tools for inventory, sales, and customer
+                                management. This leads to data silos, manual errors, and lost revenue. The client needed
+                                a unified system that could:</p>
+                            <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem;">
+                                <li>Handle inventory, POS, and customer data in one place</li>
+                                <li>Work offline (internet is unreliable in many regions)</li>
+                                <li>Support multiple users with different roles</li>
+                                <li>Be affordable and scalable for growing businesses</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/2">
+                            <h2 class="section-title text-balance" style="font-size: 1.8rem;">The Solution</h2>
+                            <p>We built Deskpro360 as a modular SaaS platform with a multi‑tenant architecture (single
+                                database with business‑level filtering). Key features include:</p>
+                            <ul style="list-style: disc; padding-left: 1.5rem; line-height: 2; margin-top: 1rem;">
+                                <li>Full POS with order splitting, discounts, and tax handling</li>
+                                <li>Offline sales queue with automatic sync on reconnect</li>
+                                <li>Real‑time stock management with low‑stock alerts</li>
+                                <li>Role‑based access (super_admin, dept_admin, agent, user)</li>
+                                <li>Bilingual UI (Arabic/English)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Technology Stack</h2>
+                    <div class="services-grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:1rem;">
+                        <div class="glass-card p-4 text-center"><strong>Django 6.0</strong><br>Backend</div>
+                        <div class="glass-card p-4 text-center"><strong>PostgreSQL</strong><br>Database</div>
+                        <div class="glass-card p-4 text-center"><strong>HTMX</strong><br>Dynamic UI</div>
+                        <div class="glass-card p-4 text-center"><strong>Alpine.js</strong><br>Interactivity</div>
+                        <div class="glass-card p-4 text-center"><strong>Tailwind CSS</strong><br>Styling</div>
+                        <div class="glass-card p-4 text-center"><strong>FontAwesome</strong><br>Icons</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover">
+                    <h2 class="section-title text-balance" style="font-size: 1.8rem;">Key Results</h2>
+                    <div class="services-grid" style="grid-template-columns: repeat(3,1fr); gap:1rem;">
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">100%</strong>
+                            <p>Offline sales capability</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">30+</strong>
+                            <p>Businesses using the platform</p>
+                        </div>
+                        <div class="glass-card p-6 text-center">
+                            <strong style="font-size: 2.5rem; color: var(--primary-soft);">50k+</strong>
+                            <p>Transactions processed</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Related Links -->
+            <section class="section-animate">
+                <div class="container glass-card p-8 glass-hover text-center">
+                    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                        <a href="/portfolio/" class="btn-secondary glow-on-hover">← Back to Portfolio</a>
+                        <a href="/contact.html" class="btn-primary glow-on-hover">Discuss a Similar Project</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+        <script src="/assets/js/menu.js" defer></script>
+        <script src="/assets/js/main.js" defer></script>
+    </body>
+
+</html>
