@@ -647,6 +647,7 @@ label {
 .section-animate.visible {
     opacity: 1;
     transform: translateY(0);
+    margin: 75px auto;
 }
 
 .flex {
